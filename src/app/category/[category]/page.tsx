@@ -37,6 +37,9 @@ const CATEGORY_MAP: Record<
   },
 };
 
+// Allow a blocking route: category parameters are required synchronously to render the catalog
+export const instant = false;
+
 export async function generateStaticParams() {
   return [{ category: 'parfum' }, { category: 'makeup' }];
 }
