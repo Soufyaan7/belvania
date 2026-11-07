@@ -7,9 +7,12 @@ export function getWhatsAppConfirmationLink(
   total: number | string,
   customNumber?: string
 ): string {
-  const defaultNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '212612345678';
-  const rawNumber = customNumber || defaultNumber;
-  const cleanNumber = rawNumber.replace(/\D/g, '');
+  const number = customNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  if (!number) {
+    console.error('[Belvania] NEXT_PUBLIC_WHATSAPP_NUMBER non configuré dans .env.local');
+    return '#whatsapp-non-configure';
+  }
+  const cleanNumber = number.replace(/\D/g, '');
 
   const text = `Bonjour Belvania, je confirme ma commande ${orderId} d'un montant de ${total} DH.`;
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
@@ -32,9 +35,12 @@ export function getWhatsAppDirectOrderLink({
   total: number;
   customNumber?: string;
 }): string {
-  const defaultNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '212612345678';
-  const rawNumber = customNumber || defaultNumber;
-  const cleanNumber = rawNumber.replace(/\D/g, '');
+  const number = customNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  if (!number) {
+    console.error('[Belvania] NEXT_PUBLIC_WHATSAPP_NUMBER non configuré dans .env.local');
+    return '#whatsapp-non-configure';
+  }
+  const cleanNumber = number.replace(/\D/g, '');
 
   const text = `Bonjour Belvania Store, je souhaite valider ma commande :
 - Nom : ${fullName || 'Non spécifié'}

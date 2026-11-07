@@ -330,7 +330,7 @@ export const Header: React.FC = () => {
                 {/* Bouton d'assistance WhatsApp directe */}
                 <div className="mt-6 pt-2">
                   <a
-                    href="https://wa.me/212612345678?text=Bonjour%20Belvania%2C%20je%20souhaite%20des%20informations%20sur%20vos%20produits"
+                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '').replace(/\D/g, '')}?text=${encodeURIComponent('Bonjour Belvania, je souhaite des informations sur vos produits')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-[#25D366] hover:bg-[#20ba5a] text-white text-[11px] font-semibold uppercase tracking-wider transition-colors shadow-xs"

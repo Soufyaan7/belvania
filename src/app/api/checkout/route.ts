@@ -104,33 +104,55 @@ export async function POST(request: Request) {
       status: 'En attente de confirmation',
     };
 
-    // 5. Envoi vers Google Script Webhook (si l'URL est configurée dans .env.local)
-    const googleScriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+    // 5. Envoi vers Google Script Webhook — URL serveur uniquement (sans NEXT_PUBLIC_)
+    const googleScriptUrl = process.env.GOOGLE_SCRIPT_URL;
 
     if (googleScriptUrl && googleScriptUrl.startsWith('http')) {
+      let sheetWriteOk = false;
       try {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 10000);
 
+        let scriptResponse: Response;
         try {
-          // Envoi avec Content-Type: 'text/plain;charset=utf-8' indispensable
-          // pour éviter les blocages de prévol CORS (OPTIONS) sur localhost et navigateurs
-          await fetch(googleScriptUrl, {
+          // Content-Type: 'text/plain;charset=utf-8' évite les prévols CORS (OPTIONS)
+          scriptResponse = await fetch(googleScriptUrl, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'text/plain;charset=utf-8',
-            },
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify(webhookPayload),
             signal: controller.signal,
           });
         } finally {
           clearTimeout(timeout);
         }
+
+        if (scriptResponse.ok) {
+          try {
+            const scriptData = await scriptResponse.json() as { success?: boolean; duplicate?: boolean; orderId?: string };
+            sheetWriteOk = scriptData.success === true;
+            if (scriptData.duplicate) {
+              // Double idempotence côté Apps Script — considéré comme succès
+              sheetWriteOk = true;
+            }
+          } catch {
+            // Apps Script a répondu 200 mais sans JSON valide — on accepte
+            sheetWriteOk = true;
+          }
+        }
       } catch (webhookErr) {
-        console.warn('Avertissement Webhook Google Script (délai dépassé ou erreur réseau):', webhookErr);
+        console.error('[Belvania] Erreur Webhook Google Script:', webhookErr);
+        sheetWriteOk = false;
+      }
+
+      if (!sheetWriteOk) {
+        return NextResponse.json(
+          { success: false, error: 'La commande n\'a pas pu être enregistrée. Veuillez réessayer ou contacter le support.' },
+          { status: 502 }
+        );
       }
     } else {
-      console.log('ℹ️ [Belvania Store] Webhook URL non configurée. Commande simulée enregistrée :', {
+      // Pas d'URL configurée : mode développement local — on simule l'enregistrement
+      console.log('ℹ️ [Belvania Store] GOOGLE_SCRIPT_URL non configurée. Commande simulée :', {
         orderId,
         customer: data.customer,
         total: data.totalAmount,
