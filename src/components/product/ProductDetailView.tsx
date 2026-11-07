@@ -121,7 +121,8 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                     alt={`${product.name} miniature ${idx + 1}`}
                     fill
                     sizes="96px"
-                    className="object-cover object-center"
+                    quality={85}
+                    className="object-contain object-center"
                   />
                 </button>
               ))}
@@ -137,9 +138,10 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
               src={formatImageSrc(product.images[selectedImageIndex] || product.images[0])}
               alt={product.name}
               fill
-              priority
+              preload
               sizes="(max-width: 1024px) 100vw, 55vw"
-              className="object-cover object-center transition-all duration-500"
+              quality={85}
+              className="object-contain object-center transition-all duration-500"
             />
 
             {/* Badge Authenticité 100% Original */}

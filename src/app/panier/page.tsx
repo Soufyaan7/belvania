@@ -138,7 +138,8 @@ export default function CartPage() {
                       alt={item.product.name}
                       fill
                       sizes="80px"
-                      className="object-cover object-center"
+                      quality={85}
+                      className="object-contain object-center"
                     />
                   </div>
 

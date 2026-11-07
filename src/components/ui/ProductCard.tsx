@@ -63,8 +63,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           src={formatImageSrc(isHovered && product.images[1] ? product.images[1] : product.images[0])}
           alt={product.name}
           fill
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 22vw"
+          quality={85}
+          className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-100"
         />
 
         {/* Badge "100% Original" */}

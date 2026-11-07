@@ -375,7 +375,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                           alt={item.product.name}
                           fill
                           sizes="56px"
-                          className="object-cover object-center"
+                          quality={85}
+                          className="object-contain object-center"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
