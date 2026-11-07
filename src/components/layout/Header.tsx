@@ -212,7 +212,6 @@ export const Header: React.FC = () => {
                             alt={prod.name}
                             fill
                             sizes="40px"
-                            quality={85}
                             className="object-contain object-center"
                           />
                         </div>

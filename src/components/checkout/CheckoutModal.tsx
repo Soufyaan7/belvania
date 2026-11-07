@@ -374,8 +374,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                           src={formatImageSrc(item.product.images[0])}
                           alt={item.product.name}
                           fill
-                          sizes="56px"
-                          quality={85}
+                          sizes="(max-width: 639px) 48px, 56px"
                           className="object-contain object-center"
                         />
                       </div>

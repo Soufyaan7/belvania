@@ -56,16 +56,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Zone Image avec Ratio Carré Strict & Cadrage Haute Qualité */}
       <Link
         href={`/products/${product.slug}`}
-        className="relative block w-full aspect-square overflow-hidden bg-[#F6F2EE] shrink-0"
+        className="relative block w-full aspect-square overflow-hidden bg-white shrink-0"
         style={{ viewTransitionName: `product-image-${product.slug}` }}
       >
         <Image
           src={formatImageSrc(isHovered && product.images[1] ? product.images[1] : product.images[0])}
           alt={product.name}
           fill
-          sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 22vw"
+          sizes="(max-width: 639px) calc((100vw - 34px) / 2), (max-width: 1023px) calc((100vw - 72px) / 2), (max-width: 1279px) calc((100vw - 112px) / 3), 286px"
           quality={85}
-          className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-100"
+          className="object-contain object-center"
         />
 
         {/* Badge "100% Original" */}

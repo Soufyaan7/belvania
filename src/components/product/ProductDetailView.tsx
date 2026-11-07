@@ -109,7 +109,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                   key={idx}
                   type="button"
                   onClick={() => handleImageChange(idx)}
-                  className={`relative w-20 h-24 sm:w-24 sm:h-28 bg-[#F6F2EE] border-2 transition-all overflow-hidden shrink-0 ${
+                  className={`relative w-20 h-24 sm:w-24 sm:h-28 bg-white border-2 transition-all overflow-hidden shrink-0 ${
                     selectedImageIndex === idx
                       ? 'border-[#141414] shadow-sm'
                       : 'border-[#EADFD7] hover:border-[#8C827A] opacity-70 hover:opacity-100'
@@ -120,8 +120,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                     src={formatImageSrc(img)}
                     alt={`${product.name} miniature ${idx + 1}`}
                     fill
-                    sizes="96px"
-                    quality={85}
+                    sizes="(max-width: 639px) 80px, 96px"
                     className="object-contain object-center"
                   />
                 </button>
@@ -131,7 +130,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
 
           {/* Image Principale avec Badges */}
           <div
-            className="relative flex-1 aspect-4/5 sm:aspect-square md:aspect-4/5 bg-[#F6F2EE] border border-[#EADFD7] overflow-hidden"
+            className="relative flex-1 aspect-4/5 sm:aspect-square md:aspect-4/5 bg-white border border-[#EADFD7] overflow-hidden"
             style={{ viewTransitionName: `product-image-${product.slug}` }}
           >
             <Image
@@ -139,7 +138,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
               alt={product.name}
               fill
               preload
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc(100vw - 160px), (max-width: 1279px) calc(58.333vw - 172.67px), 574px"
               quality={85}
               className="object-contain object-center transition-all duration-500"
             />

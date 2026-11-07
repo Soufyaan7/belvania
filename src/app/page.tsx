@@ -107,7 +107,7 @@ export default function HomePage() {
                   src={cat.image}
                   alt={cat.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc((100vw - 72px) / 2), (max-width: 1279px) calc((100vw - 88px) / 2), 596px"
                   quality={85}
                   className="object-cover object-center brightness-85 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />

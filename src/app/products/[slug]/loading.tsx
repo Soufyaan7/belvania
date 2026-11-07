@@ -12,10 +12,10 @@ export default function ProductDetailLoading() {
           {/* Galerie image gauche */}
           <div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-4">
             <div className="hidden md:flex flex-col gap-3">
-              <div className="w-20 h-24 bg-[#EADFD7]" />
-              <div className="w-20 h-24 bg-[#EADFD7]" />
+              <div className="w-20 h-24 bg-white" />
+              <div className="w-20 h-24 bg-white" />
             </div>
-            <div className="flex-1 aspect-4/5 sm:aspect-square md:aspect-4/5 bg-[#EADFD7]" />
+            <div className="flex-1 aspect-4/5 sm:aspect-square md:aspect-4/5 bg-white" />
           </div>
 
           {/* Détails droite */}
