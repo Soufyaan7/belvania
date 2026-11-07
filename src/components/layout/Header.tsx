@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useCartStore } from '@/store/useCartStore';
 import productsData from '@/data/products.json';
-import { Product, formatPrice } from '@/types/product';
+import { Product, formatPrice, formatImageSrc } from '@/types/product';
 
 const emptySubscribe = () => () => {};
 
@@ -208,7 +208,7 @@ export const Header: React.FC = () => {
                       >
                         <div className="relative w-10 h-10 bg-[#F6F2EE] shrink-0 border border-[#EADFD7] overflow-hidden">
                           <Image
-                            src={prod.images[0]}
+                            src={formatImageSrc(prod.images[0])}
                             alt={prod.name}
                             fill
                             sizes="40px"

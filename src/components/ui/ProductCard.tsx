@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, ShoppingBag, Check } from 'lucide-react';
-import { Product, formatPrice } from '@/types/product';
+import { Product, formatPrice, formatImageSrc } from '@/types/product';
 import { useCartStore } from '@/store/useCartStore';
 
 interface ProductCardProps {
@@ -60,7 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         style={{ viewTransitionName: `product-image-${product.slug}` }}
       >
         <Image
-          src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
+          src={formatImageSrc(isHovered && product.images[1] ? product.images[1] : product.images[0])}
           alt={product.name}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

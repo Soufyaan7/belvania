@@ -39,3 +39,11 @@ export const CURRENCY = 'DH';
 export function formatPrice(price: number): string {
   return `${price} ${CURRENCY}`;
 }
+
+export function formatImageSrc(src?: string): string {
+  if (!src) return '/placeholder.png';
+  if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('/')) {
+    return src;
+  }
+  return `/${src}`;
+}

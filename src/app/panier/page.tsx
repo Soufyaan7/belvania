@@ -8,7 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CheckoutModal } from '@/components/checkout/CheckoutModal';
 import { UndoToast } from '@/components/ui/UndoToast';
 import { useCartStore } from '@/store/useCartStore';
-import { formatPrice, CartItem } from '@/types/product';
+import { formatPrice, CartItem, formatImageSrc } from '@/types/product';
 import {
   Trash2,
   Plus,
@@ -134,7 +134,7 @@ export default function CartPage() {
                 >
                   <div className="relative w-20 h-24 bg-[#F6F2EE] border border-[#EADFD7] shrink-0 overflow-hidden">
                     <Image
-                      src={item.product.images[0]}
+                      src={formatImageSrc(item.product.images[0])}
                       alt={item.product.name}
                       fill
                       sizes="80px"

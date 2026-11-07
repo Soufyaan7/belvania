@@ -17,7 +17,7 @@ import {
   Building,
   MessageCircle,
 } from 'lucide-react';
-import { Product, formatPrice } from '@/types/product';
+import { Product, formatPrice, formatImageSrc } from '@/types/product';
 import { useCartStore } from '@/store/useCartStore';
 import { getWhatsAppConfirmationLink, getWhatsAppDirectOrderLink } from '@/utils/whatsapp';
 
@@ -371,7 +371,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     <div key={idx} className={`flex items-center gap-3 ${idx > 0 ? 'pt-2.5' : ''}`}>
                       <div className="relative w-12 h-14 sm:w-14 sm:h-16 bg-[#F6F2EE] border border-[#EADFD7] shrink-0 overflow-hidden">
                         <Image
-                          src={item.product.images[0]}
+                          src={formatImageSrc(item.product.images[0])}
                           alt={item.product.name}
                           fill
                           sizes="56px"

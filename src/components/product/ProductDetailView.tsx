@@ -14,7 +14,7 @@ import {
   Minus,
   Plus,
 } from 'lucide-react';
-import { Product, formatPrice } from '@/types/product';
+import { Product, formatPrice, formatImageSrc } from '@/types/product';
 import { useCartStore } from '@/store/useCartStore';
 import { CheckoutModal } from '@/components/checkout/CheckoutModal';
 
@@ -117,7 +117,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                   aria-label={`Afficher l'image ${idx + 1}`}
                 >
                   <Image
-                    src={img}
+                    src={formatImageSrc(img)}
                     alt={`${product.name} miniature ${idx + 1}`}
                     fill
                     sizes="96px"
@@ -134,7 +134,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
             style={{ viewTransitionName: `product-image-${product.slug}` }}
           >
             <Image
-              src={product.images[selectedImageIndex] || product.images[0]}
+              src={formatImageSrc(product.images[selectedImageIndex] || product.images[0])}
               alt={product.name}
               fill
               priority

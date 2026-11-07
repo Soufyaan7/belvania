@@ -8,8 +8,8 @@
     "price": 185,
     "originalPrice": 220,
     "images": [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80"
+      "/products/goodgirl-blush-elixir-1.jpg",
+      "/products/goodgirl-blush-elixir-2.jpg"
     ],
     "description": "Une interprétation encore plus intense et sensuelle de Good Girl Blush. Un accord floral boisé mystique où la rose luxuriante rencontre la vanille et le patchouli fumé. Flacon de voyage 10ml 100% original garanti.",
     "authenticityBadge": true,
@@ -30,8 +30,8 @@
     "price": 175,
     "originalPrice": 210,
     "images": [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=80"
+      "/products/libre-edp-1.jpg",
+      "/products/libre-edp-2.jpg"
     ],
     "description": "Le parfum emblématique de la femme audacieuse et libre. La tension entre la sensualité brûlante de la fleur d'oranger du Maroc et l'audace d'une lavande de France revisitée. Format 10ml original certifié.",
     "authenticityBadge": true,
@@ -52,8 +52,8 @@
     "price": 165,
     "originalPrice": 195,
     "images": [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582211594533-268f4f1edcb9?auto=format&fit=crop&w=1200&q=80"
+      "/products/l-interdit-rouge-1.jpg",
+      "/products/l-interdit-rouge-2.jpg"
     ],
     "description": "L'hommage à une féminité ardente. Le bouquet floral blanc signature de L'Interdit s'enflamme d'un accord rouge épicé d'orange sanguine et de gingembre. 10ml original avec batch code vérifié.",
     "authenticityBadge": true,
@@ -74,8 +74,8 @@
     "price": 160,
     "originalPrice": 190,
     "images": [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1200&q=80"
+     "/products/burberry-goddess-1.jpg",
+     "/products/burberry-goddess-2.jpg"
     ],
     "description": "Une fragrance aromatique gourmande et captivante guidée par un trio exceptionnel de vanilles récoltées à la main et sublimées par une lavande lumineuse. 10ml format poche original.",
     "authenticityBadge": true,
@@ -96,8 +96,8 @@
     "price": 175,
     "originalPrice": 205,
     "images": [
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80"
+      "/products/goodgirl-blush-1.jpg",
+      "/products/goodgirl-blush-2.jpg"
     ],
     "description": "Une explosion florale et poudrée rayonnante. Une double dose de vanille sensuelle alliée au romantisme d'un cœur de pivoine et à la fraîcheur de l'ylang-ylang. Format 10ml authentique.",
     "authenticityBadge": true,
@@ -140,8 +140,8 @@
     "price": 175,
     "originalPrice": 205,
     "images": [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80"
+      "/products/narciso-for-her-intense-1.jpg",
+      "/products/narciso-for-her-intense-2.jpg"
     ],
     "description": "L'ode suprême à la féminité et à la séduction subtile. Le célèbre cœur de musc Narciso est enveloppé d'accords floraux poudrés de rose et de bois chaleureux. 10ml original garanti.",
     "authenticityBadge": true,
@@ -162,8 +162,8 @@
     "price": 160,
     "originalPrice": 190,
     "images": [
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=80"
+      "/products/prada-paradoxe-1.jpg",
+      "/products/prada-paradoxe-2.jpg"
     ],
     "description": "L'expression des multiples facettes paradoxales de la femme Prada. Un sillage floral ambré novateur mariant le bourgeon de néroli à la molécule d'ambre Ambrofix. 10ml de pur luxe.",
     "authenticityBadge": true,
@@ -184,8 +184,8 @@
     "price": 165,
     "originalPrice": 195,
     "images": [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582211594533-268f4f1edcb9?auto=format&fit=crop&w=1200&q=80"
+      "/products/valentino-born-in-roma-1.jpg",
+      "/products/valentino-born-in-roma-2.jpg"
     ],
     "description": "Une célébration de l'élégance aristocratique romaine et de l'énergie urbaine contemporaine. Trois variétés de jasmin précieux fusionnent avec une vanille bourbon onctueuse. 10ml original.",
     "authenticityBadge": true,
@@ -206,8 +206,8 @@
     "price": 170,
     "originalPrice": 200,
     "images": [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80"
+      "/products/narciso-pur-musc-1.jpg",
+      "/products/narciso-pur-musc-2.jpg"
     ],
     "description": "Une ode éblouissante à la pureté et à l'intimité du musc. Le cœur signature de musc vibre au contact d'un bouquet éclatant de fleurs blanches et de cachemire délicat. Format 10ml original.",
     "authenticityBadge": true,
@@ -228,8 +228,8 @@
     "price": 550,
     "originalPrice": 620,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1200&q=80"
+      "products/nars-insatiable-liquid-blush-1.jpg",
+      "products/nars-insatiable-liquid-blush-2.jpg"
     ],
     "description": "Fard à joues liquide ultra-pigmenté et hydratant au fini satiné seconde peau. Fusionne instantanément avec le teint pour une fraîcheur radieuse toute la journée. 100% original certifié.",
     "authenticityBadge": true,
@@ -248,8 +248,8 @@
     "price": 260,
     "originalPrice": 300,
     "images": [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?auto=format&fit=crop&w=1200&q=80"
+      "products/nars-radiant-creamy-concealer-mini-1.jpg",
+      "products/nars-radiant-creamy-concealer-mini-2.jpg"
     ],
     "description": "L'anti-cernes le plus convoité des makeup artists en format mini pratique. Texture luxueuse et couvrance moyenne à totale modulable qui camoufle cernes et imperfections avec éclat.",
     "authenticityBadge": true,
@@ -268,8 +268,8 @@
     "price": 560,
     "originalPrice": 630,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=1200&q=80"
+      "products/nars-blush-en-poudre-1.jpg",
+      "products/nars-blush-en-poudre-2.jpg"
     ],
     "description": "La référence mondiale du blush poudre. Poudre micronisée ultra-fine offrant une application soyeuse sans démarcation pour sublimer le teint d'un éclat naturel inégalé.",
     "authenticityBadge": true,
@@ -288,8 +288,8 @@
     "price": 180,
     "originalPrice": 210,
     "images": [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?auto=format&fit=crop&w=1200&q=80"
+      "products/nyx-buttermelt-blush-1.jpg",
+      "products/nyx-buttermelt-blush-2.jpg"
     ],
     "description": "Fard à joues poudre fondant comme un beurre enrichi en beurres de karité, mangue et amande douce. Tenue impeccable 12h, fondu parfait et pigmentation éclatante.",
     "authenticityBadge": true,
@@ -308,8 +308,8 @@
     "price": 175,
     "originalPrice": 200,
     "images": [
-      "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80"
+      "products/nyx-fat-oil-lip-drip-1.jpg",
+      "products/nyx-fat-oil-lip-drip-2.jpg"
     ],
     "description": "Le gloss-huile sensationnel infusé de squalane et d'huile de mûre. Offre une brillance miroir spectaculaire sans effet collant et 12h d'hydratation intense.",
     "authenticityBadge": true,
@@ -328,8 +328,8 @@
     "price": 550,
     "originalPrice": 620,
     "images": [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1200&q=80"
+      "products/it-cosmetics-cc-plus-1.jpg",
+      "products/it-cosmetics-cc-plus-2.jpg"
     ],
     "description": "La crème correctrice n°1 combinant un fond de teint haute couvrance zéro défaut, un sérum anti-âge hydratant à l'acide hyaluronique et un écran solaire minéral SPF 50+.",
     "authenticityBadge": true,
@@ -348,8 +348,8 @@
     "price": 580,
     "originalPrice": 660,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?auto=format&fit=crop&w=1200&q=80"
+      "products/ysl-make-me-blush-1.jpg",
+      "products/ysl-make-me-blush-2.jpg"
     ],
     "description": "Le nouveau blush poudre couture d'Yves Saint Laurent. Effet flouteur velouté instantané, pigmentation audacieuse modulable et confort impalpable 24h.",
     "authenticityBadge": true,
@@ -368,8 +368,8 @@
     "price": 390,
     "originalPrice": 450,
     "images": [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1200&q=80"
+      "products/hudabeauty-matte-concealer-1.jpg",
+      "products/hudabeauty-matte-concealer-2.jpg"
     ],
     "description": "L'anti-cernes crémeux haute couvrance waterproof enrichi en thé vert et arbre de soie. Floute immédiatement les poches et cernes pour un regard réveillé sans filer dans les ridules.",
     "authenticityBadge": true,
@@ -388,8 +388,8 @@
     "price": 390,
     "originalPrice": 440,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=1200&q=80"
+      "products/hudabeauty-blush-filter-liquid-blush-1.jpg",
+      "products/hudabeauty-blush-filter-liquid-blush-2.jpg"
     ],
     "description": "Fard à joues liquide ultra-léger infusé de micro-perles réflectrices de lumière et doté d'un embout éponge pour un effet flouté filtre beauté instantané.",
     "authenticityBadge": true,
@@ -408,8 +408,8 @@
     "price": 600,
     "originalPrice": 690,
     "images": [
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80"
+      "products/hudabeauty-blush-filter-palette-1.jpg",
+      "products/hudabeauty-blush-filter-palette-2.jpg"
     ],
     "description": "La palette de prestige ultime associant des teintes de fard à joues et d'enlumineurs flouteurs aux textures soyeuses pour sculpter et illuminer vos pommettes.",
     "authenticityBadge": true,
