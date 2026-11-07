@@ -24,16 +24,16 @@ const CATEGORY_MAP: Record<
   }
 > = {
   parfum: {
-    title: 'Parfums Rares & Luxe',
-    subtitle: 'Créations Olfactives Authentiques',
+    title: 'Parfums',
+    subtitle: 'Flacons de Voyage 10ml • 100% Originaux',
     description:
-      'Découvrez notre collection exclusive de décants de luxe 10ml et flacons originaux des plus prestigieuses maisons : Dior, Tom Ford, Creed, YSL, Baccarat Rouge...',
+      'Découvrez notre sélection exclusive de parfums de prestige en flacons 10ml garantis 100% originaux : Yves Saint Laurent, Carolina Herrera, Givenchy, Prada, Valentino, Narciso Rodriguez, Burberry. Paiement à la réception partout au Maroc.',
   },
   makeup: {
-    title: 'Maquillage Haute Couture',
-    subtitle: 'Teint Parfait, Lèvres & Yeux Sublime',
+    title: 'Maquillage',
+    subtitle: 'Teint, Pommettes & Lèvres • Références Iconiques',
     description:
-      'Sublimez votre beauté avec des produits 100% originaux : fonds de teint iconiques, fards haute pigmentation et rouges à lèvres légendaires (NARS, Charlotte Tilbury, Rare Beauty...).',
+      'Sublimez votre éclat avec nos créations maquillage 100% authentiques : blushs fondants, correcteurs haute couvrance, huiles à lèvres et fonds de teint signés NARS, YSL, Huda Beauty, IT Cosmetics et NYX.',
   },
 };
 

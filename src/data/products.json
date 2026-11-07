@@ -2,7 +2,7 @@
   {
     "id": "parfum_goodgirl_blush_elixir",
     "slug": "goodgirl-blush-elixir",
-    "name": "GoodGirl Blush Elixir",
+    "name": "Good Girl Blush Elixir",
     "brand": "Carolina Herrera",
     "category": "parfum",
     "price": 185,
@@ -90,7 +90,7 @@
   {
     "id": "parfum_goodgirl_blush",
     "slug": "goodgirl-blush",
-    "name": "GoodGirl Blush",
+    "name": "Good Girl Blush",
     "brand": "Carolina Herrera",
     "category": "parfum",
     "price": 175,
@@ -242,7 +242,7 @@
   {
     "id": "makeup_nars_radiant_creamy_concealer_mini",
     "slug": "nars-correcteur-mini-radiant-creamy-concealer",
-    "name": "Mini Radiant Creamy Concealer",
+    "name": "Radiant Creamy Concealer Mini",
     "brand": "NARS",
     "category": "makeup",
     "price": 260,
@@ -282,7 +282,7 @@
   {
     "id": "makeup_nyx_buttermelt_blush",
     "slug": "nyx-buttermelt-blush-fard-a-joues-en-poudre",
-    "name": "Buttermelt Blush Fard à Joues",
+    "name": "Buttermelt Blush",
     "brand": "NYX Professional Makeup",
     "category": "makeup",
     "price": 180,
@@ -302,7 +302,7 @@
   {
     "id": "makeup_nyx_fat_oil_lip_drip",
     "slug": "nyx-fat-oil-lip-drip-huile-a-levres",
-    "name": "Fat Oil Lip Drip Huile à Lèvres",
+    "name": "Fat Oil Lip Drip",
     "brand": "NYX Professional Makeup",
     "category": "makeup",
     "price": 175,
@@ -362,7 +362,7 @@
   {
     "id": "makeup_hudabeauty_matte_concealer",
     "slug": "hudabeauty-matte-concealer",
-    "name": "Matte Concealer Faux Filter",
+    "name": "Matte Concealer",
     "brand": "Huda Beauty",
     "category": "makeup",
     "price": 390,

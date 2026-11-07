@@ -57,15 +57,21 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [menuOpen]);
 
-  // Filtrage des produits pour la recherche instantanée
-  const searchResults: Product[] = searchQuery.trim().length > 1
+  // Filtrage des produits pour la recherche instantanée (nom, marque, catégorie, teinte)
+  const cleanQuery = searchQuery.trim().toLowerCase();
+  const searchResults: Product[] = cleanQuery.length > 1
     ? (productsData as Product[])
-        .filter(
-          (p) =>
-            p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            p.brand.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        .slice(0, 5)
+        .filter((p) => {
+          const matchName = p.name.toLowerCase().includes(cleanQuery);
+          const matchBrand = p.brand.toLowerCase().includes(cleanQuery);
+          const matchCategory =
+            (cleanQuery === 'parfum' || cleanQuery === 'parfums') && p.category === 'parfum'
+              ? true
+              : (cleanQuery === 'maquillage' || cleanQuery === 'makeup') && p.category === 'makeup';
+          const matchShade = p.shades?.some((s) => s.name.toLowerCase().includes(cleanQuery));
+          return matchName || matchBrand || matchCategory || matchShade;
+        })
+        .slice(0, 6)
     : [];
 
   return (
@@ -290,7 +296,7 @@ export const Header: React.FC = () => {
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] font-medium text-[#141414] hover:text-[#B79A5E] hover:pl-1 transition-all border-b border-[#F0E6DE]"
                   >
-                    <span>Parfums Rares &amp; Luxe</span>
+                    <span>Parfums</span>
                     <ChevronRight className="w-4 h-4 text-[#CBB281]" />
                   </Link>
 
@@ -299,7 +305,7 @@ export const Header: React.FC = () => {
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] font-medium text-[#141414] hover:text-[#B79A5E] hover:pl-1 transition-all border-b border-[#F0E6DE]"
                   >
-                    <span>Maquillage Haute Couture</span>
+                    <span>Maquillage</span>
                     <ChevronRight className="w-4 h-4 text-[#CBB281]" />
                   </Link>
 
@@ -308,7 +314,7 @@ export const Header: React.FC = () => {
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] font-medium text-[#141414] hover:text-[#B79A5E] hover:pl-1 transition-all border-b border-[#F0E6DE]"
                   >
-                    <span>Garantie Authenticité</span>
+                    <span>Authenticité 100%</span>
                     <ChevronRight className="w-4 h-4 text-[#CBB281]" />
                   </Link>
 

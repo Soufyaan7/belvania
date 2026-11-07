@@ -41,8 +41,8 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
 
   // 3. État des variantes
   const defaultVariant =
-    product.volumeOptions && product.volumeOptions.length > 0
-      ? product.volumeOptions[0]
+    product.category === 'parfum'
+      ? '10ml'
       : product.shades && product.shades.length > 0
       ? product.shades[0].name
       : undefined;
@@ -218,57 +218,70 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
             {product.description}
           </p>
 
-          {/* SÉLECTEUR DE VARIANTES : Volumes (Parfums) */}
-          {product.volumeOptions && product.volumeOptions.length > 0 && (
+          {/* AFFICHAGE CONTENANCE : Parfums (10ml officiel, sans sélecteur artificiel) */}
+          {product.category === 'parfum' && (
+            <div className="mb-6 p-3 bg-white border border-[#EADFD7] flex items-center justify-between">
+              <div>
+                <span className="block text-[10px] uppercase tracking-wider text-[#8C827A] font-semibold">
+                  Contenance Officielle
+                </span>
+                <span className="font-display text-sm sm:text-base font-semibold text-[#141414]">
+                  10ml • Flacon Vaporisateur Nomade
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#B79A5E] font-semibold bg-[#FAF8F5] px-2.5 py-1 border border-[#DECFC4]">
+                Format Authentique
+              </span>
+            </div>
+          )}
+
+          {/* SÉLECTEUR DE TEINTES / RÉFÉRENCES : Maquillage avec plusieurs teintes */}
+          {product.category === 'makeup' && product.shades && product.shades.length > 1 && (
             <div className="mb-6">
               <label className="block text-xs font-semibold uppercase tracking-wider text-[#141414] mb-2.5">
-                Choisir la Contenance : <span className="text-[#B79A5E]">{selectedVariant}</span>
+                Choisir la Teinte / Référence :{' '}
+                <span className="text-[#B79A5E] font-bold">{selectedVariant}</span>
               </label>
               <div className="flex flex-wrap gap-2.5">
-                {product.volumeOptions.map((vol) => (
-                  <button
-                    key={vol}
-                    type="button"
-                    onClick={() => setSelectedVariant(vol)}
-                    className={`px-4 py-2.5 text-xs font-medium uppercase tracking-wider transition-all border ${
-                      selectedVariant === vol
-                        ? 'border-[#141414] bg-[#141414] text-[#FAF8F5] shadow-xs'
-                        : 'border-[#DECFC4] bg-white text-[#141414] hover:border-[#141414]'
-                    }`}
-                  >
-                    {vol}
-                  </button>
-                ))}
+                {product.shades.map((shade) => {
+                  const isSelected = selectedVariant === shade.name;
+                  return (
+                    <button
+                      key={shade.name}
+                      type="button"
+                      onClick={() => setSelectedVariant(shade.name)}
+                      className={`flex items-center gap-2 px-3.5 py-2 text-xs font-medium border transition-all cursor-pointer ${
+                        isSelected
+                          ? 'border-[#141414] bg-[#141414] text-white shadow-xs'
+                          : 'border-[#DECFC4] bg-white text-[#141414] hover:border-[#141414]'
+                      }`}
+                    >
+                      <span
+                        className="w-3.5 h-3.5 rounded-full border border-black/20 shrink-0"
+                        style={{ backgroundColor: shade.hex }}
+                      />
+                      <span>{shade.name}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
 
-          {/* SÉLECTEUR DE VARIANTES : Teintes (Maquillage) */}
-          {product.shades && product.shades.length > 0 && (
-            <div className="mb-6">
-              <label className="block text-xs font-semibold uppercase tracking-wider text-[#141414] mb-2.5">
-                Teinte Sélectionnée : <span className="text-[#B79A5E]">{selectedVariant}</span>
-              </label>
-              <div className="flex flex-wrap gap-3">
-                {product.shades.map((shade) => (
-                  <button
-                    key={shade.name}
-                    type="button"
-                    onClick={() => setSelectedVariant(shade.name)}
-                    className={`group relative p-1 tap-target-44 rounded-full border-2 transition-all ${
-                      selectedVariant === shade.name
-                        ? 'border-[#141414] scale-110'
-                        : 'border-transparent hover:border-[#DECFC4]'
-                    }`}
-                    title={shade.name}
-                    aria-label={`Teinte ${shade.name}`}
-                  >
-                    <span
-                      className="block w-6 h-6 rounded-full border border-black/20 shadow-inner"
-                      style={{ backgroundColor: shade.hex }}
-                    />
-                  </button>
-                ))}
+          {/* RÉFÉRENCE UNIQUE : Maquillage avec une seule référence (sans sélecteur) */}
+          {product.category === 'makeup' && product.shades && product.shades.length === 1 && (
+            <div className="mb-6 p-3 bg-white border border-[#EADFD7] flex items-center gap-3">
+              <span
+                className="w-5 h-5 rounded-full border border-black/20 shrink-0"
+                style={{ backgroundColor: product.shades[0].hex }}
+              />
+              <div>
+                <span className="block text-[10px] uppercase tracking-wider text-[#8C827A] font-semibold">
+                  Référence Disponible
+                </span>
+                <span className="text-xs sm:text-sm font-semibold text-[#141414]">
+                  {product.shades[0].name}
+                </span>
               </div>
             </div>
           )}

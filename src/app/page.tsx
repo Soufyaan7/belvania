@@ -18,39 +18,20 @@ import {
 
 const CATEGORIES = [
   {
-    name: 'Parfums Homme',
-    slug: 'parfums-homme',
+    name: 'Parfums',
+    subtitle: 'Flacons de Voyage 10ml • 100% Originaux',
+    slug: 'parfum',
     href: '/category/parfum',
-    count: '34 Créations',
-    image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80',
+    count: '10 Créations d\'Exception',
+    image: 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    name: 'Parfums Femme',
-    slug: 'parfums-femme',
-    href: '/category/parfum',
-    count: '42 Créations',
-    image: 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Teint',
-    slug: 'teint',
+    name: 'Maquillage',
+    subtitle: 'Teint, Lèvres & Pommettes • Haute Couture',
+    slug: 'makeup',
     href: '/category/makeup',
-    count: '28 Teintes',
-    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Lèvres',
-    slug: 'levres',
-    href: '/category/makeup',
-    count: '36 Nuances',
-    image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Yeux',
-    slug: 'yeux',
-    href: '/category/makeup',
-    count: '19 Palettes',
-    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80',
+    count: '10 Créations Iconiques',
+    image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
@@ -114,33 +95,37 @@ export default function HomePage() {
             <div className="w-12 h-0.5 bg-[#CBB281] mx-auto mt-3" />
           </div>
 
-          {/* Grille avec scroll tactile fluide sur mobile */}
-          <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto pb-4 sm:pb-0 scrollbar-none snap-x snap-mandatory">
+          {/* Grille 2 Grandes Catégories Officielles : Parfums & Maquillage */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {CATEGORIES.map((cat) => (
               <Link
                 key={cat.slug}
                 href={cat.href}
-                className="group relative flex-shrink-0 w-64 sm:w-auto snap-center overflow-hidden aspect-3/4 bg-[#141414] border border-[#EADFD7] hover:border-[#141414] transition-all duration-300"
+                className="group relative overflow-hidden aspect-4/3 sm:aspect-16/9 bg-[#141414] border border-[#EADFD7] hover:border-[#141414] transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <Image
                   src={cat.image}
                   alt={cat.name}
                   fill
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 33vw, 20vw"
-                  className="object-cover object-center brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center brightness-85 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
-                <div className="absolute inset-x-0 bottom-0 p-5 text-center text-white">
-                  <span className="text-[10px] tracking-widest uppercase text-[#CBB281] block mb-1">
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 text-white flex flex-col justify-end">
+                  <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#CBB281] font-semibold block mb-1">
                     {cat.count}
                   </span>
-                  <h3 className="font-display text-base sm:text-lg font-medium tracking-wide">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-wide">
                     {cat.name}
                   </h3>
-                  <div className="mt-2 text-[10px] uppercase tracking-widest text-[#FAF8F5]/80 underline underline-offset-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Découvrir
+                  <p className="text-xs sm:text-sm text-[#FAF8F5]/80 mt-1 font-light max-w-md">
+                    {cat.subtitle}
+                  </p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#FAF8F5] group-hover:text-[#CBB281] transition-colors">
+                    <span>Explorer la collection</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                   </div>
                 </div>
               </Link>

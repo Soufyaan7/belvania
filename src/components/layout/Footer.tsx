@@ -107,28 +107,23 @@ export const Footer: React.FC = () => {
             </h5>
             <ul className="space-y-2.5 text-xs text-[#A89F96]">
               <li>
-                <Link href="/#parfums" className="hover:text-[#F5EFEB] transition-colors">
-                  Parfums de Niche
+                <Link href="/category/parfum" className="hover:text-[#F5EFEB] transition-colors">
+                  Parfums (Flacons 10ml)
                 </Link>
               </li>
               <li>
-                <Link href="/#parfums" className="hover:text-[#F5EFEB] transition-colors">
-                  Extraits de Parfum
+                <Link href="/category/makeup" className="hover:text-[#F5EFEB] transition-colors">
+                  Maquillage Haute Couture
                 </Link>
               </li>
               <li>
-                <Link href="/#makeup" className="hover:text-[#F5EFEB] transition-colors">
-                  Rouges à Lèvres Couture
+                <Link href="/#meilleures-ventes" className="hover:text-[#F5EFEB] transition-colors">
+                  Meilleures Ventes
                 </Link>
               </li>
               <li>
-                <Link href="/#makeup" className="hover:text-[#F5EFEB] transition-colors">
-                  Teint Lumineux & Glow
-                </Link>
-              </li>
-              <li>
-                <Link href="/#nouveautes" className="hover:text-[#F5EFEB] transition-colors">
-                  Éditions Limitées
+                <Link href="/#authenticite" className="hover:text-[#F5EFEB] transition-colors">
+                  Garantie Authenticité
                 </Link>
               </li>
             </ul>

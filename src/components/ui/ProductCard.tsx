@@ -16,40 +16,47 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [added, setAdded] = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
 
+  // Variante par défaut
+  const initialOption =
+    product.category === 'parfum'
+      ? '10ml'
+      : product.shades && product.shades.length > 0
+      ? product.shades[0].name
+      : undefined;
+
+  const [selectedOption, setSelectedOption] = useState<string | undefined>(initialOption);
+
   // Calcule le pourcentage de remise si un ancien prix existe
   const discountPercent =
     product.originalPrice && product.originalPrice > product.price
       ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
       : null;
 
-  // Option par défaut sélectionnée pour l'ajout rapide
-  const defaultOption =
-    product.volumeOptions && product.volumeOptions.length > 0
-      ? product.volumeOptions[0]
-      : product.shades && product.shades.length > 0
-      ? product.shades[0].name
-      : undefined;
-
   const handleQuickAdd = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    addToCart(product, defaultOption);
+    addToCart(product, selectedOption);
     setAdded(true);
     setTimeout(() => {
       setAdded(false);
     }, 1500);
   };
 
+  const hasMultipleShades =
+    product.category === 'makeup' && product.shades && product.shades.length > 1;
+  const hasSingleShade =
+    product.category === 'makeup' && product.shades && product.shades.length === 1;
+
   return (
     <div
-      className="group relative flex flex-col bg-white border border-[#EADFD7] hover:border-[#141414] transition-all duration-300 shadow-xs hover:shadow-md"
+      className="group relative flex flex-col h-full bg-white border border-[#EADFD7] hover:border-[#141414] transition-all duration-300 shadow-xs hover:shadow-md"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Zone Image avec Ratio Carré Strict */}
+      {/* Zone Image avec Ratio Carré Strict & Cadrage Haute Qualité */}
       <Link
         href={`/products/${product.slug}`}
-        className="relative block w-full aspect-square overflow-hidden bg-[#F6F2EE]"
+        className="relative block w-full aspect-square overflow-hidden bg-[#F6F2EE] shrink-0"
         style={{ viewTransitionName: `product-image-${product.slug}` }}
       >
         <Image
@@ -75,51 +82,89 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         )}
 
-        {/* Indicateur de teintes (si produit de maquillage) */}
-        {product.shades && product.shades.length > 0 && (
-          <div className="absolute bottom-2 left-2 right-2 z-10 hidden sm:flex items-center gap-1 p-1 bg-white/85 backdrop-blur-xs">
-            <span className="text-[8px] uppercase tracking-wider text-[#736A63] mr-0.5">Teintes:</span>
-            {product.shades.slice(0, 4).map((shade) => (
-              <span
-                key={shade.name}
-                title={shade.name}
-                className="w-2.5 h-2.5 rounded-full border border-black/20"
-                style={{ backgroundColor: shade.hex }}
-              />
-            ))}
-            {product.shades.length > 4 && (
-              <span className="text-[8px] text-[#736A63]">+{product.shades.length - 4}</span>
-            )}
+        {/* Contenance 10ml discrète sur l'image pour les parfums */}
+        {product.category === 'parfum' && (
+          <div className="absolute bottom-2 right-2 z-10 px-1.5 py-0.5 bg-black/75 backdrop-blur-xs text-white text-[9px] sm:text-[10px] tracking-wider font-semibold">
+            10ml
           </div>
         )}
       </Link>
 
-      {/* Détails du Produit */}
+      {/* Détails du Produit avec Hauteur Homogène */}
       <div className="flex flex-col flex-1 p-2.5 sm:p-4">
-        {/* Marque en majuscules (text-xs / text-[10px]) */}
-        <p className="text-[9px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#8C827A] mb-1 truncate">
+        {/* Marque en majuscules discrète et raffinée */}
+        <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8C827A] mb-1 truncate">
           {product.brand.toUpperCase()}
         </p>
 
-        {/* Nom du produit (text-sm / text-xs) */}
+        {/* Nom du produit avec 2 lignes max pour égaliser toutes les hauteurs de carte */}
         <Link
           href={`/products/${product.slug}`}
-          className="group-hover:text-[#B79A5E] transition-colors"
+          className="group-hover:text-[#B79A5E] transition-colors mb-1.5"
         >
-          <h3 className="font-display text-xs sm:text-sm md:text-base font-medium text-[#141414] line-clamp-1 mb-1.5">
+          <h3 className="font-display text-xs sm:text-sm font-medium text-[#141414] line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] leading-snug">
             {product.name}
           </h3>
         </Link>
 
-        {/* Description courte / contenances */}
-        <p className="text-[10px] sm:text-xs text-[#8C827A] line-clamp-1 leading-relaxed mb-3">
-          {product.volumeOptions && product.volumeOptions.length > 0
-            ? `${product.volumeOptions.join(' • ')}`
-            : product.description}
-        </p>
+        {/* Référence ou Contenance sous le nom */}
+        <div className="mb-2">
+          {product.category === 'parfum' && (
+            <span className="inline-flex items-center text-[10px] sm:text-xs text-[#736A63] bg-[#FAF8F5] px-2 py-0.5 border border-[#EADFD7] tracking-wide font-medium">
+              Contenance : 10ml
+            </span>
+          )}
 
-        {/* Prix et Boutons d'action */}
-        <div className="mt-auto pt-2 sm:pt-3 border-t border-[#F0E6DE] flex flex-col gap-2">
+          {hasSingleShade && product.shades && (
+            <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs text-[#736A63] bg-[#FAF8F5] px-2 py-0.5 border border-[#EADFD7] tracking-wide font-medium">
+              <span
+                className="w-2 h-2 rounded-full border border-black/20 shrink-0"
+                style={{ backgroundColor: product.shades[0].hex }}
+              />
+              <span>Réf : {product.shades[0].name}</span>
+            </span>
+          )}
+
+          {/* Sélecteur interactif de références / teintes si plusieurs variantes */}
+          {hasMultipleShades && product.shades && (
+            <div className="space-y-1">
+              <span className="text-[9px] uppercase tracking-wider text-[#8C827A] block font-semibold">
+                Choisir la teinte :
+              </span>
+              <div className="flex items-center gap-1 flex-wrap">
+                {product.shades.map((shade) => {
+                  const isSelected = selectedOption === shade.name;
+                  return (
+                    <button
+                      key={shade.name}
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setSelectedOption(shade.name);
+                      }}
+                      className={`inline-flex items-center gap-1 px-1.5 py-0.5 text-[9px] sm:text-[10px] border transition-colors cursor-pointer ${
+                        isSelected
+                          ? 'border-[#141414] bg-[#141414] text-white font-semibold shadow-2xs'
+                          : 'border-[#DECFC4] bg-white text-[#524B45] hover:border-[#141414]'
+                      }`}
+                      title={`Sélectionner ${shade.name}`}
+                    >
+                      <span
+                        className="w-2 h-2 rounded-full border border-black/20 shrink-0"
+                        style={{ backgroundColor: shade.hex }}
+                      />
+                      <span className="truncate max-w-[68px] sm:max-w-[85px]">{shade.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Prix et Boutons d'action fixés en bas de carte */}
+        <div className="mt-auto pt-2.5 sm:pt-3 border-t border-[#F0E6DE] flex flex-col gap-2">
           {/* Tarification */}
           <div className="flex items-baseline gap-1.5 tabular-nums">
             <span className="text-xs sm:text-base font-bold text-[#141414] tracking-tight">
@@ -132,11 +177,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             )}
           </div>
 
-          {/* Boutons d'action responsive (Voir / Commander) */}
+          {/* Boutons d'action responsive (Voir / Acheter) */}
           <div className="grid grid-cols-2 gap-1.5">
             <Link
               href={`/products/${product.slug}`}
-              className="py-1.5 sm:py-2 px-1 text-center text-[10px] sm:text-xs uppercase tracking-wider font-medium text-[#141414] bg-[#F5EFEB] hover:bg-[#EADFD7] transition-colors"
+              className="py-2 px-1 text-center text-[10px] sm:text-xs uppercase tracking-wider font-medium text-[#141414] bg-[#F5EFEB] hover:bg-[#EADFD7] transition-colors flex items-center justify-center tap-target-44"
             >
               Voir
             </Link>
@@ -145,7 +190,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               type="button"
               onClick={handleQuickAdd}
               disabled={!product.inStock}
-              className={`py-1.5 sm:py-2 px-1 flex items-center justify-center gap-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition-all ${
+              className={`py-2 px-1 flex items-center justify-center gap-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition-all tap-target-44 cursor-pointer ${
                 added
                   ? 'bg-[#2E7D32] text-white'
                   : 'bg-[#141414] text-white hover:bg-[#CBB281] hover:text-[#141414]'
@@ -153,12 +198,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             >
               {added ? (
                 <>
-                  <Check className="w-3 h-3" />
+                  <Check className="w-3 h-3 shrink-0" />
                   <span className="truncate">Ajouté</span>
                 </>
               ) : (
                 <>
-                  <ShoppingBag className="w-3 h-3" />
+                  <ShoppingBag className="w-3 h-3 shrink-0" />
                   <span className="truncate">Acheter</span>
                 </>
               )}
