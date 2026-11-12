@@ -152,7 +152,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     }
 
     if (!selectedDestination || shippingFee === undefined || totalAmount === null) {
-      setError('Destination inconnue. Please verify your city pour calculer les frais de livraison.');
+      setError('Destination inconnue. Veuillez verifier votre ville pour calculer les frais de livraison.');
       return;
     }
 
@@ -395,7 +395,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   </div>
                   <div className="flex justify-between">
                     <span>Frais de livraison</span>
-                    <span className="font-medium text-[#141414]">{shippingFee === undefined ? 'To be calculated' : formatPrice(shippingFee)}</span>
+                    <span className="font-medium text-[#141414]">{shippingFee === undefined ? 'A calculer' : formatPrice(shippingFee)}</span>
                   </div>
                   <div className="flex justify-between text-sm font-bold text-[#141414] pt-2 border-t border-[#DECFC4]">
                     <span>Total à payer à la réception</span>

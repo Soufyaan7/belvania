@@ -289,13 +289,13 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
 
           {/* Quantité & Bouton CTA Desktop */}
           <div className="space-y-4 pt-2 mb-8">
-            <div className="flex items-center gap-4">
+            <div className="grid grid-cols-2 gap-2 md:flex md:items-center md:gap-4">
               {/* Sélecteur quantité */}
-              <div className="flex items-center border border-[#DECFC4] bg-white">
+              <div className="col-span-2 flex w-fit items-center border border-[#DECFC4] bg-white md:col-span-1">
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  className="p-3 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
+                  className="min-h-11 min-w-11 p-3 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
                   aria-label="Diminuer la quantité"
                 >
                   <Minus className="w-3.5 h-3.5" />
@@ -306,7 +306,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => q + 1)}
-                  className="p-3 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
+                  className="min-h-11 min-w-11 p-3 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
                   aria-label="Augmenter la quantité"
                 >
                   <Plus className="w-3.5 h-3.5" />
@@ -317,17 +317,20 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
               <button
                 type="button"
                 onClick={() => setIsCheckoutOpen(true)}
-                className="flex-1 py-4 px-6 text-xs font-semibold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 shadow-md bg-[#141414] text-[#FAF8F5] hover:bg-[#CBB281] hover:text-[#141414]"
+                className="col-span-1 flex min-h-11 min-w-0 items-center justify-center gap-1.5 bg-[#141414] px-2 py-3 text-center text-[10px] font-semibold uppercase leading-tight tracking-wide text-[#FAF8F5] shadow-md transition-all hover:bg-[#CBB281] hover:text-[#141414] md:min-h-0 md:flex-1 md:gap-2 md:px-6 md:py-4 md:text-xs md:tracking-[0.2em]"
               >
-                <Sparkles className="w-4 h-4 text-[#CBB281]" />
-                <span>Acheter maintenant (Paiement à la réception)</span>
+                <Sparkles className="h-4 w-4 shrink-0 text-[#CBB281]" />
+                <span className="min-w-0">
+                  <span className="md:hidden">Acheter maintenant</span>
+                  <span className="hidden md:inline">Acheter maintenant (Paiement à la réception)</span>
+                </span>
               </button>
 
               {/* Bouton Ajouter au Panier */}
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className={`py-4 px-5 text-xs font-semibold uppercase tracking-wider transition-all border flex items-center justify-center gap-1.5 ${
+                className={`col-span-1 flex min-h-11 min-w-0 items-center justify-center gap-1.5 border px-2 py-3 text-[10px] font-semibold uppercase tracking-wider transition-all md:px-5 md:py-4 md:text-xs ${
                   addedFeedback
                     ? 'bg-[#2E7D32] text-white border-[#2E7D32]'
                     : 'bg-white text-[#141414] border-[#DECFC4] hover:border-[#141414]'
@@ -521,7 +524,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
             <button
               type="button"
               onClick={handleAddToCart}
-              className={`p-3 border transition-colors shrink-0 ${
+              className={`min-h-11 min-w-11 shrink-0 border p-3 transition-colors ${
                 addedFeedback
                   ? 'bg-[#2E7D32] text-white border-[#2E7D32]'
                   : 'bg-white border-[#DECFC4] text-[#141414] active:bg-[#F5EFEB]'
@@ -534,10 +537,10 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
             <button
               type="button"
               onClick={() => setIsCheckoutOpen(true)}
-              className="flex-1 py-3 px-3 text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm bg-[#141414] text-[#FAF8F5] active:bg-[#CBB281] active:text-[#141414]"
+              className="flex min-h-11 min-w-0 flex-1 items-center justify-center gap-1.5 bg-[#141414] px-3 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF8F5] shadow-sm transition-all active:bg-[#CBB281] active:text-[#141414]"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#CBB281]" />
-              <span>Acheter (COD)</span>
+              <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#CBB281]" />
+              <span className="min-w-0 text-center">Acheter (COD)</span>
             </button>
           </div>
         </div>

@@ -50,12 +50,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
   if (!config) {
     return {
-      title: 'Catégorie non trouvée | Belvania Store',
+      title: 'Catégorie non trouvée',
     };
   }
 
   return {
-    title: `${config.title} | Belvania Store`,
+    title: config.title,
     description: config.description,
     openGraph: {
       title: `${config.title} | Belvania Store`,

@@ -236,7 +236,7 @@ export default function CartPage() {
                     <span className="font-medium text-[#736A63]">Selon la ville</span>
                   </div>
                   <div className="flex justify-between text-base font-bold text-[#141414] pt-3 border-t border-[#DECFC4]">
-                    <span>Total à régler (COD)</span>
+                    <span>Sous-total avant livraison</span>
                     <span className="text-lg text-[#141414]">{formatPrice(totalAmount)}</span>
                   </div>
                 </div>

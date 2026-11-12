@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Confirmation de Commande | Belvania Store',
+  title: 'Confirmation de Commande',
   description:
     'Votre commande Belvania Store a bien été enregistrée. Retrouvez votre récapitulatif et confirmez votre expédition sur WhatsApp.',
   robots: {

@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!product) {
     return {
-      title: 'Produit non trouvé | Belvania Store',
+      title: 'Produit non trouvé',
     };
   }
 
   return {
-    title: `${product.name} - ${product.brand} | Belvania Store`,
+    title: `${product.name} - ${product.brand}`,
     description: product.description,
     openGraph: {
       title: `${product.name} | Belvania Store`,
