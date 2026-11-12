@@ -1,0 +1,2182 @@
+[
+  {
+    "destination": "Adouz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Afourer",
+    "fee": 45.0
+  },
+  {
+    "destination": "Agadir",
+    "fee": 35.0
+  },
+  {
+    "destination": "Agafay",
+    "fee": 45.0
+  },
+  {
+    "destination": "Agdz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aghbala-beni mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aghbalou N serdan",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aghroude - BenSergao",
+    "fee": 40.0
+  },
+  {
+    "destination": "Agouim",
+    "fee": 45.0
+  },
+  {
+    "destination": "AGOURAY",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aguelmous",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ahfir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ahmar laglalcha-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Aicha",
+    "fee": 45.0
+  },
+  {
+    "destination": "ain aicha - taounate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Allah",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Aouda",
+    "fee": 30.0
+  },
+  {
+    "destination": "AIN ATIQ",
+    "fee": 30.0
+  },
+  {
+    "destination": "Ain Beida",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN BELLOUT-Tanger",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Bida",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN BNI MATHAR",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN CHGAG",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Chkef",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN DALIA-tanger",
+    "fee": 40.0
+  },
+  {
+    "destination": "Ain Dfali-Ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Dorij",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain el Mediour- taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Harrouda",
+    "fee": 40.0
+  },
+  {
+    "destination": "Ain jiri",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Johra",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN LEUH",
+    "fee": 45.0
+  },
+  {
+    "destination": "ain mediouna - taounate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Sbit",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN SFA-OUJDA",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIN SMEN-FES",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Taoujdate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ain Tekki",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Ali",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait amira",
+    "fee": 45.0
+  },
+  {
+    "destination": "AIT BAHA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Ben Haddou",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait El Moudden",
+    "fee": 40.0
+  },
+  {
+    "destination": "Ait ishaK",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait ishaq",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Kamra",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Laaza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Meloul",
+    "fee": 40.0
+  },
+  {
+    "destination": "Ait Ourir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Taoukte",
+    "fee": 40.0
+  },
+  {
+    "destination": "Ait Yaazem-meknes",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ait Zineb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ajdir (Région Hociema)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ajdir (Région Taza)",
+    "fee": 45.0
+  },
+  {
+    "destination": "AKCHOUR",
+    "fee": 45.0
+  },
+  {
+    "destination": "Akermoud",
+    "fee": 45.0
+  },
+  {
+    "destination": "Akhfennir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Akka-tata",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aklim",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aknoul-taza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Al Aaroui",
+    "fee": 45.0
+  },
+  {
+    "destination": "Al Hoceima",
+    "fee": 45.0
+  },
+  {
+    "destination": "Al kamoun-ksba tadla",
+    "fee": 45.0
+  },
+  {
+    "destination": "ALLAL TAZI",
+    "fee": 45.0
+  },
+  {
+    "destination": "Alnif",
+    "fee": 45.0
+  },
+  {
+    "destination": "Amerzgane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Amizmiz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Amzmiz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Annual",
+    "fee": 45.0
+  },
+  {
+    "destination": "Anza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Anza - Taddart",
+    "fee": 40.0
+  },
+  {
+    "destination": "Aouama-Tanger",
+    "fee": 40.0
+  },
+  {
+    "destination": "Aoufous",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aoulouz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Arba Aounate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Arbaoua",
+    "fee": 45.0
+  },
+  {
+    "destination": "Arekmane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Arfoud",
+    "fee": 45.0
+  },
+  {
+    "destination": "ASJENN-ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Asni",
+    "fee": 45.0
+  },
+  {
+    "destination": "Assa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Assa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Assilah",
+    "fee": 45.0
+  },
+  {
+    "destination": "Atlas Saghir ifrane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Awrir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Azemmour",
+    "fee": 45.0
+  },
+  {
+    "destination": "Azilal",
+    "fee": 45.0
+  },
+  {
+    "destination": "azrou ait melloul",
+    "fee": 45.0
+  },
+  {
+    "destination": "Azrou(reg meknes)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Aït Attab",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bab berred",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bab Marzouka-Taza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bab Taza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bejaad",
+    "fee": 45.0
+  },
+  {
+    "destination": "Belfaa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ben Ahmed - CHEFCHAOUEN -",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ben Ahmed - Settat -",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ben Guerir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ben Taieb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ben Yakhlef",
+    "fee": 45.0
+  },
+  {
+    "destination": "BEN ZOLI",
+    "fee": 45.0
+  },
+  {
+    "destination": "Beni Ansar",
+    "fee": 45.0
+  },
+  {
+    "destination": "BENI CHIKER",
+    "fee": 45.0
+  },
+  {
+    "destination": "Beni Mellal",
+    "fee": 40.0
+  },
+  {
+    "destination": "Beni Quolla-ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Beni Tajjite",
+    "fee": 45.0
+  },
+  {
+    "destination": "Benslimane ( reg mohamedia)",
+    "fee": 35.0
+  },
+  {
+    "destination": "Berkane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Berrchid",
+    "fee": 40.0
+  },
+  {
+    "destination": "Biogra",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bir Jdid",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bir Mezoui",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bir Tam Tam",
+    "fee": 45.0
+  },
+  {
+    "destination": "Birkouate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bni Bouayach",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bni Drar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bni hdifa - Region Al hoceima",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bou Adel",
+    "fee": 45.0
+  },
+  {
+    "destination": "bouaadl-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouanane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouarfa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouarg",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouderbala",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boudinar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boudnib",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boufakrane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouhouda-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouizakarne",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boujdour",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boujniba",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boujniba",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boukidaren",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boulanouar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boulemane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boumalne Dades",
+    "fee": 45.0
+  },
+  {
+    "destination": "Boumia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bounouar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bourouta",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouskoura",
+    "fee": 40.0
+  },
+  {
+    "destination": "BOUYAFAR",
+    "fee": 45.0
+  },
+  {
+    "destination": "Bouznika",
+    "fee": 35.0
+  },
+  {
+    "destination": "BRADIA",
+    "fee": 45.0
+  },
+  {
+    "destination": "BRIKCHA-ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Cabo Negro",
+    "fee": 45.0
+  },
+  {
+    "destination": "cap beddouza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Casablanca",
+    "fee": 35.0
+  },
+  {
+    "destination": "Chefchaouen",
+    "fee": 45.0
+  },
+  {
+    "destination": "Chellalat Mohammedia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Chemaia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Chichaoua",
+    "fee": 45.0
+  },
+  {
+    "destination": "Chouiter",
+    "fee": 45.0
+  },
+  {
+    "destination": "Chraka - Tanger",
+    "fee": 40.0
+  },
+  {
+    "destination": "Chrifia-Marrakech",
+    "fee": 45.0
+  },
+  {
+    "destination": "Dakhla",
+    "fee": 45.0
+  },
+  {
+    "destination": "Dar Bouaza",
+    "fee": 40.0
+  },
+  {
+    "destination": "Dar El Kebdani",
+    "fee": 45.0
+  },
+  {
+    "destination": "DAR GUEDDARI",
+    "fee": 45.0
+  },
+  {
+    "destination": "Dcheira",
+    "fee": 40.0
+  },
+  {
+    "destination": "Demnate",
+    "fee": 45.0
+  },
+  {
+    "destination": "DERDARA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Deroua",
+    "fee": 45.0
+  },
+  {
+    "destination": "Dlalha",
+    "fee": 45.0
+  },
+  {
+    "destination": "Drarga",
+    "fee": 40.0
+  },
+  {
+    "destination": "Driouch",
+    "fee": 45.0
+  },
+  {
+    "destination": "EL AIOUN SIDI MELLOUK",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Aouamra",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Borj-KHENIFRA",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Borouj",
+    "fee": 45.0
+  },
+  {
+    "destination": "El boura-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Gara",
+    "fee": 40.0
+  },
+  {
+    "destination": "El Haj Kaddour",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Hajeb",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Hanchane",
+    "fee": 45.0
+  },
+  {
+    "destination": "El houmer-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Jadida",
+    "fee": 35.0
+  },
+  {
+    "destination": "El Jebeha",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Jorf Lasfar",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Kebab-KHENIFRA",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Kelaa Des Sraghna",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Ksiba",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Mansouria",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Marsa",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Menzale-sefrou",
+    "fee": 45.0
+  },
+  {
+    "destination": "EL MNBAR-Tanger",
+    "fee": 45.0
+  },
+  {
+    "destination": "El Ouatia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Errachidia",
+    "fee": 45.0
+  },
+  {
+    "destination": "ERRAHMA VILLE",
+    "fee": 40.0
+  },
+  {
+    "destination": "Errich",
+    "fee": 45.0
+  },
+  {
+    "destination": "Essaouira",
+    "fee": 45.0
+  },
+  {
+    "destination": "Essmara",
+    "fee": 45.0
+  },
+  {
+    "destination": "Fam El Hisn-tata",
+    "fee": 45.0
+  },
+  {
+    "destination": "Farkhana",
+    "fee": 45.0
+  },
+  {
+    "destination": "FERYATA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Fes",
+    "fee": 35.0
+  },
+  {
+    "destination": "Figuig",
+    "fee": 45.0
+  },
+  {
+    "destination": "Fnideq",
+    "fee": 45.0
+  },
+  {
+    "destination": "Foum El Anceur",
+    "fee": 45.0
+  },
+  {
+    "destination": "Foum Jamaa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Foum Oudi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Foum Zaouia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Fquih Ben Salah",
+    "fee": 45.0
+  },
+  {
+    "destination": "Gfifat-oulad teima",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ghafsai",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ghazoua",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ghighaya",
+    "fee": 45.0
+  },
+  {
+    "destination": "Guelmim",
+    "fee": 45.0
+  },
+  {
+    "destination": "Guercif",
+    "fee": 45.0
+  },
+  {
+    "destination": "Gueznaia - Tanger",
+    "fee": 40.0
+  },
+  {
+    "destination": "Guisser (settat)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Gulmima - errachidia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had bouhssoussen",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had Draa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had Hrara",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had Hrara-SAFI",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had kourt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Had Soualem",
+    "fee": 45.0
+  },
+  {
+    "destination": "Harhoura",
+    "fee": 25.0
+  },
+  {
+    "destination": "Hatane-Khouribga",
+    "fee": 45.0
+  },
+  {
+    "destination": "HATTANE",
+    "fee": 45.0
+  },
+  {
+    "destination": "Houara-oulad teima",
+    "fee": 45.0
+  },
+  {
+    "destination": "HOUARA-Tanger",
+    "fee": 45.0
+  },
+  {
+    "destination": "Idouirane-Imintanuot",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ifran",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ighil Ouderdour",
+    "fee": 40.0
+  },
+  {
+    "destination": "ighram laalam-beni mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ighrem N Ougdal",
+    "fee": 45.0
+  },
+  {
+    "destination": "IGHREM-TATA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ikhourbane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imi Ouaddar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imini-Ouarzazate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imintanoute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imounsiss",
+    "fee": 40.0
+  },
+  {
+    "destination": "Imouzzer Kandar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imouzzer Marmoucha",
+    "fee": 45.0
+  },
+  {
+    "destination": "Imzouren",
+    "fee": 45.0
+  },
+  {
+    "destination": "Inzegane",
+    "fee": 40.0
+  },
+  {
+    "destination": "Issafen-tata",
+    "fee": 45.0
+  },
+  {
+    "destination": "issaguen",
+    "fee": 45.0
+  },
+  {
+    "destination": "Itzer-zaida",
+    "fee": 45.0
+  },
+  {
+    "destination": "Izemmouren",
+    "fee": 45.0
+  },
+  {
+    "destination": "Jaadar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Jemâa-Shaim",
+    "fee": 45.0
+  },
+  {
+    "destination": "Jerada",
+    "fee": 45.0
+  },
+  {
+    "destination": "Jerf El Melha",
+    "fee": 45.0
+  },
+  {
+    "destination": "Jorf El Melha",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kalaat MGouna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Karia Be Mohammed",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kariat Arkman‎-Nador",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kasbah Tadla",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kasbat ayir-oualidia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kassita",
+    "fee": 45.0
+  },
+  {
+    "destination": "Kenitra",
+    "fee": 35.0
+  },
+  {
+    "destination": "Khemis Sahel",
+    "fee": 45.0
+  },
+  {
+    "destination": "Khemisset",
+    "fee": 35.0
+  },
+  {
+    "destination": "Khenichet",
+    "fee": 45.0
+  },
+  {
+    "destination": "Khenifra",
+    "fee": 45.0
+  },
+  {
+    "destination": "Khmiss Zemamera",
+    "fee": 45.0
+  },
+  {
+    "destination": "Khouribga",
+    "fee": 40.0
+  },
+  {
+    "destination": "Krimda",
+    "fee": 40.0
+  },
+  {
+    "destination": "Krona",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ksar El Kebir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ksar Sghir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Laarache",
+    "fee": 40.0
+  },
+  {
+    "destination": "Laatamna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Laattaouia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Laayoun Cherqia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Laayoune",
+    "fee": 45.0
+  },
+  {
+    "destination": "Lakhssas",
+    "fee": 45.0
+  },
+  {
+    "destination": "Lakhyayeta",
+    "fee": 45.0
+  },
+  {
+    "destination": "Lalla Mimouna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Lalla Takerkoust",
+    "fee": 45.0
+  },
+  {
+    "destination": "LAMJAARA-ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Laouamra- ksar el kebir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Larache",
+    "fee": 35.0
+  },
+  {
+    "destination": "Lehri-KHENIFRA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Leqliaa - Taddart",
+    "fee": 45.0
+  },
+  {
+    "destination": "LOUDAYA",
+    "fee": 45.0
+  },
+  {
+    "destination": "lqliaa",
+    "fee": 45.0
+  },
+  {
+    "destination": "M Diq",
+    "fee": 45.0
+  },
+  {
+    "destination": "Madagh-berkan",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mariouari",
+    "fee": 45.0
+  },
+  {
+    "destination": "Marrakech",
+    "fee": 35.0
+  },
+  {
+    "destination": "Marrakech",
+    "fee": 35.0
+  },
+  {
+    "destination": "Martil",
+    "fee": 40.0
+  },
+  {
+    "destination": "Masmouda - Ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "MASSA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Maâziz",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mechra Bel Ksiri",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mediouna",
+    "fee": 45.0
+  },
+  {
+    "destination": "MEHARZA-Tanger",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mehdya",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mejjat-chichaoua",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mejji",
+    "fee": 45.0
+  },
+  {
+    "destination": "Meknes",
+    "fee": 35.0
+  },
+  {
+    "destination": "Mellalyène",
+    "fee": 45.0
+  },
+  {
+    "destination": "MERCHOUCH",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mers El Kheir",
+    "fee": 35.0
+  },
+  {
+    "destination": "Merzouga",
+    "fee": 45.0
+  },
+  {
+    "destination": "MEZRAOUA-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mhamid Lghezlane",
+    "fee": 45.0
+  },
+  {
+    "destination": "MHAMID TEN",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mhaya",
+    "fee": 45.0
+  },
+  {
+    "destination": "Midar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Midelt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mirleft",
+    "fee": 45.0
+  },
+  {
+    "destination": "Missour",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mohammedia",
+    "fee": 35.0
+  },
+  {
+    "destination": "Mokrisset",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moqrisset",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moulay Abdallah Amghar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moulay bouazza khenifra",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moulay Bousselham",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moulay Idriss Zerhoun",
+    "fee": 45.0
+  },
+  {
+    "destination": "Moulay Yaâcoub",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mrirt",
+    "fee": 45.0
+  },
+  {
+    "destination": "MSOUN taza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mzefroune-ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Mzoudia",
+    "fee": 40.0
+  },
+  {
+    "destination": "Nador",
+    "fee": 45.0
+  },
+  {
+    "destination": "Nkob",
+    "fee": 45.0
+  },
+  {
+    "destination": "Nouaceur",
+    "fee": 45.0
+  },
+  {
+    "destination": "nouail-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Nzalat Laadam",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouad Laou",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oualidia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouaouizeght",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouaouizeght",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouaoumana",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouargui",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouarzazat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oudaya",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oued Amlil",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oued Jdida",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oued Zem",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oujda",
+    "fee": 40.0
+  },
+  {
+    "destination": "OULAD ABBOU-settat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Aissa- el jadida",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Aissa-TAROUDANT",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Ayad",
+    "fee": 45.0
+  },
+  {
+    "destination": "oulad berhil",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Bourahma",
+    "fee": 40.0
+  },
+  {
+    "destination": "Oulad brahim-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Dahou-HOUARA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Ettayeb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Fraj",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Jerrar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad M barek-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "oulad mhela-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Othmane",
+    "fee": 45.0
+  },
+  {
+    "destination": "oulad oujih",
+    "fee": 45.0
+  },
+  {
+    "destination": "oulad said settat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Said-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Settout",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Tayeb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Teima",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Terna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Yahya Lagraire",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad yahya-Marrakech",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulad Zidoh",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Abbou-TAROUDANT",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled azem-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled El Ghadbane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Khlifa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Moqaddem",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Moussa-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Mssaad",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Slim Khrarib",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouled Yaiche",
+    "fee": 45.0
+  },
+  {
+    "destination": "Oulmas",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ounagha",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ourika",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ourtzagh-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Outat El Haj",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ouzoud",
+    "fee": 45.0
+  },
+  {
+    "destination": "Port of Tan-Tan",
+    "fee": 45.0
+  },
+  {
+    "destination": "Rabat",
+    "fee": 20.0
+  },
+  {
+    "destination": "Ras El Ain (settat)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ras El Ain Rehamena- Tamelelt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ras El Ma (REG NADOR)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ras El Ma Fes",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ras Tabouda",
+    "fee": 45.0
+  },
+  {
+    "destination": "Rehamna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Ribate El Kheir-sefrou",
+    "fee": 45.0
+  },
+  {
+    "destination": "Rissani",
+    "fee": 45.0
+  },
+  {
+    "destination": "Romani",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sabaa Aiyoun",
+    "fee": 45.0
+  },
+  {
+    "destination": "Safi",
+    "fee": 40.0
+  },
+  {
+    "destination": "Saidia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sale",
+    "fee": 25.0
+  },
+  {
+    "destination": "Sale Al Jadida-سلا",
+    "fee": 25.0
+  },
+  {
+    "destination": "Sebt ben sassi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sebt El Guerdane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sebt Gzoula",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sebt Oulad Nemma",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sefrou",
+    "fee": 45.0
+  },
+  {
+    "destination": "Selouane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Settat",
+    "fee": 40.0
+  },
+  {
+    "destination": "SIDI AADI",
+    "fee": 45.0
+  },
+  {
+    "destination": "sidi aadi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Abdellah Ghiat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Aissa-Beni-Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Allal el Bahraoui",
+    "fee": 35.0
+  },
+  {
+    "destination": "sidi allal tazi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Bennour",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Bernoussi",
+    "fee": 40.0
+  },
+  {
+    "destination": "Sidi Bibi - Agadir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Bou Othmane",
+    "fee": 45.0
+  },
+  {
+    "destination": "sidi boujida",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Bouknadel",
+    "fee": 40.0
+  },
+  {
+    "destination": "Sidi Bousberr",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Bouzid",
+    "fee": 40.0
+  },
+  {
+    "destination": "Sidi el Aidi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Elmoukhtar - Chichaoua",
+    "fee": 45.0
+  },
+  {
+    "destination": "sidi hajjaj (settat)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Harazem",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Ifni",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Kacem",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Kaouki",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Messaoud",
+    "fee": 40.0
+  },
+  {
+    "destination": "Sidi moussa lhamri-TAROUDANT",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Moussa-OURIKA",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Redouane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Rehal-casa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Sliman (reg kacem)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Smail",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Smail",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Taibi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Yahya El Gharb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Yahya Zaer",
+    "fee": 45.0
+  },
+  {
+    "destination": "Sidi Zouine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Skhirat",
+    "fee": 30.0
+  },
+  {
+    "destination": "Skhour Rehamna",
+    "fee": 45.0
+  },
+  {
+    "destination": "Skoura-Ouarzazate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Smimou",
+    "fee": 45.0
+  },
+  {
+    "destination": "Souihla",
+    "fee": 45.0
+  },
+  {
+    "destination": "souiria Guedima (REG SAFI)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Souk El Had Des Bradia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Souk Elarbaa Du Gharb",
+    "fee": 45.0
+  },
+  {
+    "destination": "Stehat-Chefchaouen",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tabounte",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taddart - Charaf - AGADIR",
+    "fee": 35.0
+  },
+  {
+    "destination": "Taddart - TAZA -",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tadouaret-Agadir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tafersit",
+    "fee": 45.0
+  },
+  {
+    "destination": "TAFOUGHALT",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tafraoute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taftecht",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tagadirt-Agadir",
+    "fee": 45.0
+  },
+  {
+    "destination": "TAGANTE",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taghazoute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taghbalte",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taghjijt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tagmout-tata",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tagomite",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tagounite",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tagzert",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tahannaout",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tahar Souk-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tahla",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tajda",
+    "fee": 45.0
+  },
+  {
+    "destination": "tala youssef",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tala Youssef-hociema",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taliouine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Talmest",
+    "fee": 45.0
+  },
+  {
+    "destination": "TALSINNT",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamait Izder-agadir",
+    "fee": 45.0
+  },
+  {
+    "destination": "tamaloukt-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamanar",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamansourt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamaris",
+    "fee": 40.0
+  },
+  {
+    "destination": "tamchat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamegroute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamelelt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tameslouht",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamesna",
+    "fee": 30.0
+  },
+  {
+    "destination": "Tamraght",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tamsamane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tan Tan",
+    "fee": 45.0
+  },
+  {
+    "destination": "TANANTE-AZILAL",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tanger",
+    "fee": 35.0
+  },
+  {
+    "destination": "TANGER-bougdour",
+    "fee": 40.0
+  },
+  {
+    "destination": "TANGER-chaouia",
+    "fee": 40.0
+  },
+  {
+    "destination": "Tanougha-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tanougha-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tanougha-Beni Mellal",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taounate",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taourirt",
+    "fee": 45.0
+  },
+  {
+    "destination": "targuist",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tarmigt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taroudannt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tassaout",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tassoultante",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tata",
+    "fee": 45.0
+  },
+  {
+    "destination": "Taza",
+    "fee": 40.0
+  },
+  {
+    "destination": "Tazemmourt-taroudant",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tazenakht",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tazzarine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Temsia-agadir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tendrara",
+    "fee": 45.0
+  },
+  {
+    "destination": "Terfaya",
+    "fee": 45.0
+  },
+  {
+    "destination": "Teroual - Ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tetouan",
+    "fee": 35.0
+  },
+  {
+    "destination": "Tiddas",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tiflet",
+    "fee": 35.0
+  },
+  {
+    "destination": "Tifoultoute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tighassaline ville",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tikiouine",
+    "fee": 40.0
+  },
+  {
+    "destination": "TIMAHDITE-AZROU",
+    "fee": 45.0
+  },
+  {
+    "destination": "Timdline",
+    "fee": 45.0
+  },
+  {
+    "destination": "Timezgana-taounat",
+    "fee": 45.0
+  },
+  {
+    "destination": "Timoulay",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tin Mansour",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tinghir",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tinjdad",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tinnegza",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tinzouline-zagora",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tit Melil",
+    "fee": 40.0
+  },
+  {
+    "destination": "Tizi Ouasli",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tiznit",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tiztoutine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tlata Loulad Fini",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tlauh - Tamelelt",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tnine Beni Meskine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tnine Chtouka (el jadida)",
+    "fee": 45.0
+  },
+  {
+    "destination": "Toundoute",
+    "fee": 45.0
+  },
+  {
+    "destination": "Tīdās-Khemisset",
+    "fee": 45.0
+  },
+  {
+    "destination": "Youssoufia",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zag-VILLE",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zagora",
+    "fee": 45.0
+  },
+  {
+    "destination": "zaida",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zaio",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zaouia Bougrine",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zaouiat Cheikh",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zaouiet Bouzarktoune",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zayda",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zeghanghane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zemamra",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zone Franche (kenitra)",
+    "fee": 40.0
+  },
+  {
+    "destination": "Zouada",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zoualeth Dkhissa",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zoumi",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zoumi-Ouazzane",
+    "fee": 45.0
+  },
+  {
+    "destination": "Zrizer",
+    "fee": 45.0
+  },
+  {
+    "destination": "zrizer - taounate",
+    "fee": 45.0
+  }
+]

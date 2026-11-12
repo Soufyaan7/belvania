@@ -20,6 +20,7 @@ import {
 import { Product, formatPrice, formatImageSrc } from '@/types/product';
 import { useCartStore } from '@/store/useCartStore';
 import { getWhatsAppConfirmationLink, getWhatsAppDirectOrderLink } from '@/utils/whatsapp';
+import { ameexDestinations, findAmeexDestination } from '@/utils/ameex';
 
 export interface CheckoutItem {
   product: Product;
@@ -35,25 +36,6 @@ interface CheckoutModalProps {
   directItem?: CheckoutItem;
 }
 
-const MOROCCAN_CITIES = [
-  'Casablanca',
-  'Rabat',
-  'Marrakech',
-  'Tanger',
-  'Fès',
-  'Agadir',
-  'Meknès',
-  'Oujda',
-  'Tétouan',
-  'Kénitra',
-  'Salé',
-  'Mohammédia',
-  'El Jadida',
-  'Nador',
-  'Béni Mellal',
-  'Autre ville (Maroc)',
-];
-
 export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   isOpen,
   onClose,
@@ -68,20 +50,22 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     ? [directItem]
     : cartItems;
 
+  const [fullName, setFullName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [city, setCity] = useState('');
+  const [address, setAddress] = useState('');
+  const [notes, setNotes] = useState('');
+
   // Calculs financiers
   const subtotal = itemsToOrder.reduce(
     (acc, it) => acc + it.product.price * it.quantity,
     0
   );
-  const shippingFee = 0; // Livraison offerte partout
-  const totalAmount = subtotal + shippingFee;
+  const selectedDestination = findAmeexDestination(city);
+  const shippingFee = selectedDestination?.fee;
+  const totalAmount = shippingFee === undefined ? null : subtotal + shippingFee;
 
   // État du formulaire
-  const [fullName, setFullName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('Casablanca');
-  const [address, setAddress] = useState('');
-  const [notes, setNotes] = useState('');
 
   // États d'envoi
   const [loading, setLoading] = useState(false);
@@ -164,6 +148,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
     if (!address.trim()) {
       setError('Veuillez indiquer votre adresse de livraison ou quartier.');
+      return;
+    }
+
+    if (!selectedDestination || shippingFee === undefined || totalAmount === null) {
+      setError('Destination inconnue. Please verify your city pour calculer les frais de livraison.');
       return;
     }
 
@@ -333,14 +322,14 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 <p className="flex items-start gap-2">
                   <Truck className="w-4 h-4 text-[#B79A5E] shrink-0 mt-0.5" />
                   <span>
-                    Montant total à régler en espèces à la livraison : <strong>{formatPrice(totalAmount)}</strong>.
+                    Montant total à régler en espèces à la livraison : <strong>{totalAmount === null ? 'Choisir une ville' : formatPrice(totalAmount)}</strong>.
                   </span>
                 </p>
               </div>
 
               <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={getWhatsAppConfirmationLink(confirmedOrderId, totalAmount)}
+                  href={getWhatsAppConfirmationLink(confirmedOrderId, totalAmount as number)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold uppercase tracking-[0.18em] transition-all flex items-center justify-center gap-2 shadow-sm"
@@ -406,11 +395,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   </div>
                   <div className="flex justify-between">
                     <span>Frais de livraison</span>
-                    <span className="font-semibold text-[#2E7D32] uppercase">Gratuit</span>
+                    <span className="font-medium text-[#141414]">{shippingFee === undefined ? 'To be calculated' : formatPrice(shippingFee)}</span>
                   </div>
                   <div className="flex justify-between text-sm font-bold text-[#141414] pt-2 border-t border-[#DECFC4]">
                     <span>Total à payer à la réception</span>
-                    <span className="text-base text-[#141414]">{formatPrice(totalAmount)}</span>
+                    <span className="text-base text-[#141414]">{totalAmount === null ? 'Choisir une ville' : formatPrice(totalAmount)}</span>
                   </div>
                 </div>
               </div>
@@ -429,7 +418,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       <span>{error}</span>
                     </div>
 
-                    <div className="pt-1">
+                    {totalAmount !== null && <div className="pt-1">
                       <a
                         href={getWhatsAppDirectOrderLink({
                           fullName: fullName.trim(),
@@ -437,7 +426,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                           city,
                           address: address.trim(),
                           items: itemsTextSummary,
-                          total: totalAmount,
+                          total: totalAmount as number,
                         })}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -446,7 +435,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         <MessageCircle className="w-4 h-4 fill-white shrink-0" />
                         <span>Commander directement sur WhatsApp</span>
                       </a>
-                    </div>
+                    </div>}
                   </div>
                 )}
 
@@ -495,19 +484,31 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     Ville *
                   </label>
                   <div className="relative">
-                    <select
+                    <input
+                      type="text"
+                      list="ameex-destinations"
+                      autoComplete="address-level2"
+                      placeholder="Rechercher une ville"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="w-full bg-white border border-[#DECFC4] px-3.5 py-2 pl-9 text-xs text-[#141414] focus:outline-none focus:border-[#141414] transition-colors appearance-none cursor-pointer"
-                    >
-                      {MOROCCAN_CITIES.map((c) => (
-                        <option key={c} value={c}>
-                          {c}
-                        </option>
+                      onBlur={() => {
+                        const match = findAmeexDestination(city);
+                        if (match) setCity(match.destination);
+                      }}
+                      className="w-full bg-white border border-[#DECFC4] px-3.5 py-2 pl-9 text-xs text-[#141414] focus:outline-none focus:border-[#141414] transition-colors"
+                    />
+                    <datalist id="ameex-destinations">
+                      {ameexDestinations.map((entry, index) => (
+                        <option key={`${entry.destination}-${index}`} value={entry.destination} />
                       ))}
-                    </select>
+                    </datalist>
                     <Building className="absolute left-3 top-2.5 w-4 h-4 text-[#A89F96] pointer-events-none" />
                   </div>
+                  {city && !selectedDestination && (
+                    <p role="alert" className="mt-1 text-xs text-[#C62828]">
+                      Ville non reconnue. Verifiez votre destination pour calculer les frais.
+                    </p>
+                  )}
                 </div>
 
                 {/* Adresse complète */}
@@ -557,7 +558,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 <div className="pt-1 pb-2">
                   <button
                     type="submit"
-                    disabled={loading}
+                    disabled={loading || !selectedDestination}
                     className="w-full py-3.5 px-5 bg-[#141414] text-[#FAF8F5] hover:bg-[#CBB281] hover:text-[#141414] active:scale-[0.99] text-xs font-semibold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {loading ? (
@@ -567,7 +568,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       </>
                     ) : (
                       <>
-                        <span>Valider la commande • {formatPrice(totalAmount)}</span>
+                        <span>Valider la commande • {totalAmount === null ? 'Choisir une ville' : formatPrice(totalAmount)}</span>
                       </>
                     )}
                   </button>

@@ -189,7 +189,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
                   {formatPrice(product.originalPrice)}
                 </span>
                 <span className="text-xs font-semibold text-[#B79A5E] bg-white px-2 py-0.5 border border-[#DECFC4]">
-                  Économisez {formatPrice(product.originalPrice - product.price)}
+                  -10 %
                 </span>
               </>
             )}

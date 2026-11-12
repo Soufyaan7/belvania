@@ -228,12 +228,12 @@ export default function CartPage() {
 
                 <div className="space-y-2.5 text-xs text-[#736A63] tabular-nums">
                   <div className="flex justify-between">
-                    <span>Sous-total ({itemCount} articles)</span>
+                    <span>Sous-total produits ({itemCount} articles)</span>
                     <span className="font-medium text-[#141414]">{formatPrice(totalAmount)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Frais de livraison</span>
-                    <span className="font-semibold text-[#2E7D32] uppercase">Gratuit</span>
+                    <span className="font-medium text-[#736A63]">Selon la ville</span>
                   </div>
                   <div className="flex justify-between text-base font-bold text-[#141414] pt-3 border-t border-[#DECFC4]">
                     <span>Total à régler (COD)</span>

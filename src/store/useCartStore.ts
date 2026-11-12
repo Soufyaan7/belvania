@@ -1,6 +1,11 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Product, CartItem } from '@/types/product';
+import productsData from '@/data/products.json';
+
+const currentProducts = new Map(
+  (productsData as Product[]).map((product) => [product.id, product])
+);
 
 export interface CartStore {
   items: CartItem[];
@@ -115,6 +120,17 @@ export const useCartStore = create<CartStore>()(
     }),
     {
       name: 'belvania-cart-storage',
+      version: 1,
+      migrate: (persistedState) => {
+        const state = persistedState as CartStore;
+        return {
+          ...state,
+          items: (state.items ?? []).flatMap((item) => {
+            const product = currentProducts.get(item.product.id);
+            return product ? [{ ...item, product }] : [];
+          }),
+        };
+      },
       storage: createJSONStorage(() =>
         typeof window !== 'undefined'
           ? localStorage

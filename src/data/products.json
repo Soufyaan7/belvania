@@ -6,7 +6,6 @@
     "brand": "Carolina Herrera",
     "category": "parfum",
     "price": 185,
-    "originalPrice": 220,
     "images": [
       "/products/goodgirl-blush-elixir-1.jpg",
       "/products/goodgirl-blush-elixir-2.jpg"
@@ -14,11 +13,22 @@
     "description": "Une interprétation encore plus intense et sensuelle de Good Girl Blush. Un accord floral boisé mystique où la rose luxuriante rencontre la vanille et le patchouli fumé. Flacon de voyage 10ml 100% original garanti.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Mandarine italienne", "Amande amère"],
-      "heart": ["Absolu de rose", "Ylang-ylang solaire"],
-      "base": ["Vanille bourbon", "Patchouli fumé"]
+      "top": [
+        "Mandarine italienne",
+        "Amande amère"
+      ],
+      "heart": [
+        "Absolu de rose",
+        "Ylang-ylang solaire"
+      ],
+      "base": [
+        "Vanille bourbon",
+        "Patchouli fumé"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -28,7 +38,6 @@
     "brand": "Yves Saint Laurent",
     "category": "parfum",
     "price": 175,
-    "originalPrice": 210,
     "images": [
       "/products/libre-edp-1.jpg",
       "/products/libre-edp-2.jpg"
@@ -36,11 +45,24 @@
     "description": "Le parfum emblématique de la femme audacieuse et libre. La tension entre la sensualité brûlante de la fleur d'oranger du Maroc et l'audace d'une lavande de France revisitée. Format 10ml original certifié.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Huile de mandarine", "Lavande de France", "Cassis"],
-      "heart": ["Fleur d'oranger du Maroc", "Jasmin Sambac"],
-      "base": ["Extrait de vanille de Madagascar", "Bois de cèdre", "Ambre gris"]
+      "top": [
+        "Huile de mandarine",
+        "Lavande de France",
+        "Cassis"
+      ],
+      "heart": [
+        "Fleur d'oranger du Maroc",
+        "Jasmin Sambac"
+      ],
+      "base": [
+        "Extrait de vanille de Madagascar",
+        "Bois de cèdre",
+        "Ambre gris"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -50,7 +72,6 @@
     "brand": "Givenchy",
     "category": "parfum",
     "price": 165,
-    "originalPrice": 195,
     "images": [
       "/products/l-interdit-rouge-1.jpg",
       "/products/l-interdit-rouge-2.jpg"
@@ -58,11 +79,24 @@
     "description": "L'hommage à une féminité ardente. Le bouquet floral blanc signature de L'Interdit s'enflamme d'un accord rouge épicé d'orange sanguine et de gingembre. 10ml original avec batch code vérifié.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Orange sanguine", "Gingembre rouge piquant"],
-      "heart": ["Fleur d'oranger", "Tubéreuse veloutée", "Jasmin"],
-      "base": ["Feuille de piment", "Patchouli d'Indonésie", "Bois de santal"]
+      "top": [
+        "Orange sanguine",
+        "Gingembre rouge piquant"
+      ],
+      "heart": [
+        "Fleur d'oranger",
+        "Tubéreuse veloutée",
+        "Jasmin"
+      ],
+      "base": [
+        "Feuille de piment",
+        "Patchouli d'Indonésie",
+        "Bois de santal"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -72,19 +106,28 @@
     "brand": "Burberry",
     "category": "parfum",
     "price": 160,
-    "originalPrice": 190,
     "images": [
-     "/products/burberry-goddess-1.jpg",
-     "/products/burberry-goddess-2.jpg"
+      "/products/burberry-goddess-1.jpg",
+      "/products/burberry-goddess-2.jpg"
     ],
     "description": "Une fragrance aromatique gourmande et captivante guidée par un trio exceptionnel de vanilles récoltées à la main et sublimées par une lavande lumineuse. 10ml format poche original.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Infusion de vanille", "Lavande de Provence"],
-      "heart": ["Caviar de vanille riche"],
-      "base": ["Absolu de vanille noire", "Fève de cacao"]
+      "top": [
+        "Infusion de vanille",
+        "Lavande de Provence"
+      ],
+      "heart": [
+        "Caviar de vanille riche"
+      ],
+      "base": [
+        "Absolu de vanille noire",
+        "Fève de cacao"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -94,7 +137,6 @@
     "brand": "Carolina Herrera",
     "category": "parfum",
     "price": 175,
-    "originalPrice": 205,
     "images": [
       "/products/goodgirl-blush-1.jpg",
       "/products/goodgirl-blush-2.jpg"
@@ -102,11 +144,23 @@
     "description": "Une explosion florale et poudrée rayonnante. Une double dose de vanille sensuelle alliée au romantisme d'un cœur de pivoine et à la fraîcheur de l'ylang-ylang. Format 10ml authentique.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Bergamote italienne", "Amande amère"],
-      "heart": ["Pivoine rosée", "Eau de rose upcyclée", "Ylang-ylang"],
-      "base": ["Vanille bourbon", "Fève tonka torréfiée"]
+      "top": [
+        "Bergamote italienne",
+        "Amande amère"
+      ],
+      "heart": [
+        "Pivoine rosée",
+        "Eau de rose upcyclée",
+        "Ylang-ylang"
+      ],
+      "base": [
+        "Vanille bourbon",
+        "Fève tonka torréfiée"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -116,7 +170,6 @@
     "brand": "Yves Saint Laurent",
     "category": "parfum",
     "price": 175,
-    "originalPrice": 210,
     "images": [
       "/products/libre-intense-1.jpg",
       "/products/libre-intense-2.jpg"
@@ -124,11 +177,25 @@
     "description": "Une version encore plus fauve et incandescente de Libre. La signature lavande-fleur d'oranger s'enrichit d'une orchidée sauvage suave et d'une vanille ambrée addictive. 10ml original.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Essence de lavande", "Mandarine", "Bergamote"],
-      "heart": ["Fleur d'oranger du Maroc", "Jasmin Sambac", "Orchidée fauve"],
-      "base": ["Extrait de vanille de Madagascar", "Ambre doux", "Vétiver"]
+      "top": [
+        "Essence de lavande",
+        "Mandarine",
+        "Bergamote"
+      ],
+      "heart": [
+        "Fleur d'oranger du Maroc",
+        "Jasmin Sambac",
+        "Orchidée fauve"
+      ],
+      "base": [
+        "Extrait de vanille de Madagascar",
+        "Ambre doux",
+        "Vétiver"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -138,7 +205,6 @@
     "brand": "Narciso Rodriguez",
     "category": "parfum",
     "price": 175,
-    "originalPrice": 205,
     "images": [
       "/products/narciso-for-her-intense-1.jpg",
       "/products/narciso-for-her-intense-2.jpg"
@@ -146,11 +212,21 @@
     "description": "L'ode suprême à la féminité et à la séduction subtile. Le célèbre cœur de musc Narciso est enveloppé d'accords floraux poudrés de rose et de bois chaleureux. 10ml original garanti.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Rose de mai", "Pêche blanche sucrée"],
-      "heart": ["Cœur de musc signature Narciso"],
-      "base": ["Patchouli sombre", "Bois d'ambre velouté"]
+      "top": [
+        "Rose de mai",
+        "Pêche blanche sucrée"
+      ],
+      "heart": [
+        "Cœur de musc signature Narciso"
+      ],
+      "base": [
+        "Patchouli sombre",
+        "Bois d'ambre velouté"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -160,7 +236,6 @@
     "brand": "Prada",
     "category": "parfum",
     "price": 160,
-    "originalPrice": 190,
     "images": [
       "/products/prada-paradoxe-1.jpg",
       "/products/prada-paradoxe-2.jpg"
@@ -168,11 +243,23 @@
     "description": "L'expression des multiples facettes paradoxales de la femme Prada. Un sillage floral ambré novateur mariant le bourgeon de néroli à la molécule d'ambre Ambrofix. 10ml de pur luxe.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Bourgeon de néroli de Calabre", "Poire croquante", "Bergamote"],
-      "heart": ["Fleur d'oranger", "Jasmin Sambac"],
-      "base": ["Accord ambré Ambrofix", "Musc blanc Serenolide"]
+      "top": [
+        "Bourgeon de néroli de Calabre",
+        "Poire croquante",
+        "Bergamote"
+      ],
+      "heart": [
+        "Fleur d'oranger",
+        "Jasmin Sambac"
+      ],
+      "base": [
+        "Accord ambré Ambrofix",
+        "Musc blanc Serenolide"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -182,7 +269,6 @@
     "brand": "Valentino",
     "category": "parfum",
     "price": 165,
-    "originalPrice": 195,
     "images": [
       "/products/valentino-born-in-roma-1.jpg",
       "/products/valentino-born-in-roma-2.jpg"
@@ -190,11 +276,24 @@
     "description": "Une célébration de l'élégance aristocratique romaine et de l'énergie urbaine contemporaine. Trois variétés de jasmin précieux fusionnent avec une vanille bourbon onctueuse. 10ml original.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Cassis", "Poivre rose", "Bergamote d'Italie"],
-      "heart": ["Jasmin grandiflorum", "Jasmin d'Arabie"],
-      "base": ["Vanille bourbon de Madagascar", "Bois de gaïac", "Cashmeran"]
+      "top": [
+        "Cassis",
+        "Poivre rose",
+        "Bergamote d'Italie"
+      ],
+      "heart": [
+        "Jasmin grandiflorum",
+        "Jasmin d'Arabie"
+      ],
+      "base": [
+        "Vanille bourbon de Madagascar",
+        "Bois de gaïac",
+        "Cashmeran"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -204,7 +303,6 @@
     "brand": "Narciso Rodriguez",
     "category": "parfum",
     "price": 170,
-    "originalPrice": 200,
     "images": [
       "/products/narciso-pur-musc-1.jpg",
       "/products/narciso-pur-musc-2.jpg"
@@ -212,11 +310,19 @@
     "description": "Une ode éblouissante à la pureté et à l'intimité du musc. Le cœur signature de musc vibre au contact d'un bouquet éclatant de fleurs blanches et de cachemire délicat. Format 10ml original.",
     "authenticityBadge": true,
     "fragranceNotes": {
-      "top": ["Bouquet de fleurs blanches cristallines"],
-      "heart": ["Cœur de musc pur signature"],
-      "base": ["Bois de cachemire soyeux"]
+      "top": [
+        "Bouquet de fleurs blanches cristallines"
+      ],
+      "heart": [
+        "Cœur de musc pur signature"
+      ],
+      "base": [
+        "Bois de cachemire soyeux"
+      ]
     },
-    "volumeOptions": ["10ml"],
+    "volumeOptions": [
+      "10ml"
+    ],
     "inStock": true
   },
   {
@@ -225,8 +331,8 @@
     "name": "Insatiable Liquid Blush",
     "brand": "NARS",
     "category": "makeup",
-    "price": 550,
-    "originalPrice": 620,
+    "price": 495,
+    "originalPrice": 550,
     "images": [
       "products/nars-insatiable-liquid-blush-1.jpg",
       "products/nars-insatiable-liquid-blush-2.jpg"
@@ -234,8 +340,14 @@
     "description": "Fard à joues liquide ultra-pigmenté et hydratant au fini satiné seconde peau. Fusionne instantanément avec le teint pour une fraîcheur radieuse toute la journée. 100% original certifié.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Orgasm", "hex": "#E59086" },
-      { "name": "Girl Happy", "hex": "#D6707C" }
+      {
+        "name": "Orgasm",
+        "hex": "#E59086"
+      },
+      {
+        "name": "Girl Happy",
+        "hex": "#D6707C"
+      }
     ],
     "inStock": true
   },
@@ -245,8 +357,8 @@
     "name": "Radiant Creamy Concealer Mini",
     "brand": "NARS",
     "category": "makeup",
-    "price": 260,
-    "originalPrice": 300,
+    "price": 234,
+    "originalPrice": 260,
     "images": [
       "products/nars-radiant-creamy-concealer-mini-1.jpg",
       "products/nars-radiant-creamy-concealer-mini-2.jpg"
@@ -254,8 +366,14 @@
     "description": "L'anti-cernes le plus convoité des makeup artists en format mini pratique. Texture luxueuse et couvrance moyenne à totale modulable qui camoufle cernes et imperfections avec éclat.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Light 1 Chantilly", "hex": "#F9ECE2" },
-      { "name": "Light 2 Vanilla", "hex": "#F3DEC9" }
+      {
+        "name": "Light 1 Chantilly",
+        "hex": "#F9ECE2"
+      },
+      {
+        "name": "Light 2 Vanilla",
+        "hex": "#F3DEC9"
+      }
     ],
     "inStock": true
   },
@@ -265,8 +383,8 @@
     "name": "Blush en Poudre",
     "brand": "NARS",
     "category": "makeup",
-    "price": 560,
-    "originalPrice": 630,
+    "price": 504,
+    "originalPrice": 560,
     "images": [
       "products/nars-blush-en-poudre-1.jpg",
       "products/nars-blush-en-poudre-2.jpg"
@@ -274,8 +392,14 @@
     "description": "La référence mondiale du blush poudre. Poudre micronisée ultra-fine offrant une application soyeuse sans démarcation pour sublimer le teint d'un éclat naturel inégalé.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Orgasm", "hex": "#E59086" },
-      { "name": "Thrill", "hex": "#ED758B" }
+      {
+        "name": "Orgasm",
+        "hex": "#E59086"
+      },
+      {
+        "name": "Thrill",
+        "hex": "#ED758B"
+      }
     ],
     "inStock": true
   },
@@ -285,8 +409,8 @@
     "name": "Buttermelt Blush",
     "brand": "NYX Professional Makeup",
     "category": "makeup",
-    "price": 180,
-    "originalPrice": 210,
+    "price": 162,
+    "originalPrice": 180,
     "images": [
       "products/nyx-buttermelt-blush-1.jpg",
       "products/nyx-buttermelt-blush-2.jpg"
@@ -294,8 +418,14 @@
     "description": "Fard à joues poudre fondant comme un beurre enrichi en beurres de karité, mangue et amande douce. Tenue impeccable 12h, fondu parfait et pigmentation éclatante.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "BMBL04", "hex": "#D46A6A" },
-      { "name": "BMBL01", "hex": "#ECA395" }
+      {
+        "name": "BMBL04",
+        "hex": "#D46A6A"
+      },
+      {
+        "name": "BMBL01",
+        "hex": "#ECA395"
+      }
     ],
     "inStock": true
   },
@@ -305,8 +435,8 @@
     "name": "Fat Oil Lip Drip",
     "brand": "NYX Professional Makeup",
     "category": "makeup",
-    "price": 175,
-    "originalPrice": 200,
+    "price": 158,
+    "originalPrice": 175,
     "images": [
       "products/nyx-fat-oil-lip-drip-1.jpg",
       "products/nyx-fat-oil-lip-drip-2.jpg"
@@ -314,8 +444,14 @@
     "description": "Le gloss-huile sensationnel infusé de squalane et d'huile de mûre. Offre une brillance miroir spectaculaire sans effet collant et 12h d'hydratation intense.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "FOLD04", "hex": "#9E3A45" },
-      { "name": "FOLD02", "hex": "#DC7D83" }
+      {
+        "name": "FOLD04",
+        "hex": "#9E3A45"
+      },
+      {
+        "name": "FOLD02",
+        "hex": "#DC7D83"
+      }
     ],
     "inStock": true
   },
@@ -325,8 +461,8 @@
     "name": "CC+ Fond de Teint Couvrance Totale",
     "brand": "IT Cosmetics",
     "category": "makeup",
-    "price": 550,
-    "originalPrice": 620,
+    "price": 495,
+    "originalPrice": 550,
     "images": [
       "products/it-cosmetics-cc-plus-1.jpg",
       "products/it-cosmetics-cc-plus-2.jpg"
@@ -334,8 +470,14 @@
     "description": "La crème correctrice n°1 combinant un fond de teint haute couvrance zéro défaut, un sérum anti-âge hydratant à l'acide hyaluronique et un écran solaire minéral SPF 50+.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Light", "hex": "#EED7C5" },
-      { "name": "Medium", "hex": "#DFBEA2" }
+      {
+        "name": "Light",
+        "hex": "#EED7C5"
+      },
+      {
+        "name": "Medium",
+        "hex": "#DFBEA2"
+      }
     ],
     "inStock": true
   },
@@ -345,8 +487,8 @@
     "name": "Make Me Blush Bold Blurring Blush",
     "brand": "Yves Saint Laurent",
     "category": "makeup",
-    "price": 580,
-    "originalPrice": 660,
+    "price": 522,
+    "originalPrice": 580,
     "images": [
       "products/ysl-make-me-blush-1.jpg",
       "products/ysl-make-me-blush-2.jpg"
@@ -354,8 +496,14 @@
     "description": "Le nouveau blush poudre couture d'Yves Saint Laurent. Effet flouteur velouté instantané, pigmentation audacieuse modulable et confort impalpable 24h.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "93", "hex": "#C95A68" },
-      { "name": "54", "hex": "#DC7F78" }
+      {
+        "name": "93",
+        "hex": "#C95A68"
+      },
+      {
+        "name": "54",
+        "hex": "#DC7F78"
+      }
     ],
     "inStock": true
   },
@@ -365,8 +513,8 @@
     "name": "Matte Concealer",
     "brand": "Huda Beauty",
     "category": "makeup",
-    "price": 390,
-    "originalPrice": 450,
+    "price": 351,
+    "originalPrice": 390,
     "images": [
       "products/hudabeauty-matte-concealer-1.jpg",
       "products/hudabeauty-matte-concealer-2.jpg"
@@ -374,8 +522,14 @@
     "description": "L'anti-cernes crémeux haute couvrance waterproof enrichi en thé vert et arbre de soie. Floute immédiatement les poches et cernes pour un regard réveillé sans filer dans les ridules.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Honey 1.7B", "hex": "#D8AB83" },
-      { "name": "Meringue 2.1N", "hex": "#DFB792" }
+      {
+        "name": "Honey 1.7B",
+        "hex": "#D8AB83"
+      },
+      {
+        "name": "Meringue 2.1N",
+        "hex": "#DFB792"
+      }
     ],
     "inStock": true
   },
@@ -385,8 +539,8 @@
     "name": "Blush Filter Liquid Blush",
     "brand": "Huda Beauty",
     "category": "makeup",
-    "price": 390,
-    "originalPrice": 440,
+    "price": 351,
+    "originalPrice": 390,
     "images": [
       "products/hudabeauty-blush-filter-liquid-blush-1.jpg",
       "products/hudabeauty-blush-filter-liquid-blush-2.jpg"
@@ -394,8 +548,14 @@
     "description": "Fard à joues liquide ultra-léger infusé de micro-perles réflectrices de lumière et doté d'un embout éponge pour un effet flouté filtre beauté instantané.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Intense Guava", "hex": "#E05A6D" },
-      { "name": "Cotton Candy", "hex": "#F48CA4" }
+      {
+        "name": "Intense Guava",
+        "hex": "#E05A6D"
+      },
+      {
+        "name": "Cotton Candy",
+        "hex": "#F48CA4"
+      }
     ],
     "inStock": true
   },
@@ -405,8 +565,8 @@
     "name": "Blush Filter Blurring Blushlighters Palette",
     "brand": "Huda Beauty",
     "category": "makeup",
-    "price": 600,
-    "originalPrice": 690,
+    "price": 540,
+    "originalPrice": 600,
     "images": [
       "products/hudabeauty-blush-filter-palette-1.jpg",
       "products/hudabeauty-blush-filter-palette-2.jpg"
@@ -414,7 +574,10 @@
     "description": "La palette de prestige ultime associant des teintes de fard à joues et d'enlumineurs flouteurs aux textures soyeuses pour sculpter et illuminer vos pommettes.",
     "authenticityBadge": true,
     "shades": [
-      { "name": "Rose Berry", "hex": "#C2596C" }
+      {
+        "name": "Rose Berry",
+        "hex": "#C2596C"
+      }
     ],
     "inStock": true
   }
