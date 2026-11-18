@@ -26,9 +26,11 @@ export interface CheckoutPayload {
   };
   items: Array<{
     id: string;
+    itemType?: 'product' | 'pack';
     name: string;
     brand: string;
     selectedOption?: string;
+    includedProducts?: Array<{ name: string; quantity: number; selectedOption: string }>;
     price: number;
     quantity: number;
   }>;
@@ -83,10 +85,9 @@ export async function POST(request: Request) {
     // 3. Formatage de la liste des articles pour le tableur / webhook
     const itemsSummary = data.items
       .map(
-        (item) =>
-          `${item.name} (${item.brand})${
-            item.selectedOption ? ` [${item.selectedOption}]` : ''
-          } x ${item.quantity} = ${item.price * item.quantity} DH`
+        (item) => item.itemType === 'pack'
+          ? `[PACK] ${item.name} (${item.brand}) [Contient: ${(item.includedProducts ?? []).map((product) => `${product.name} ${product.selectedOption}${product.quantity > 1 ? ` x ${product.quantity}` : ''}`).join(', ')}] | Quantité: ${item.quantity} | Prix unitaire: ${item.price} DH | Sous-total: ${item.price * item.quantity} DH`
+          : `${item.name} (${item.brand})${item.selectedOption ? ` [${item.selectedOption}]` : ''} x ${item.quantity} = ${item.price * item.quantity} DH`
       )
       .join('\n');
 
@@ -99,6 +100,8 @@ export async function POST(request: Request) {
       city: data.customer.city,
       address: data.customer.address || 'Non spécifiée',
       items: itemsSummary,
+      subtotal: data.subtotal,
+      shippingFee: data.shippingFee,
       totalAmount: data.totalAmount,
       notes: data.customer.notes || '',
       status: 'En attente de confirmation',

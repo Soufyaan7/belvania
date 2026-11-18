@@ -17,16 +17,13 @@ import {
   Building,
   MessageCircle,
 } from 'lucide-react';
-import { Product, formatPrice, formatImageSrc } from '@/types/product';
+import { CartLine, formatPrice, formatImageSrc, getCartLinePrice, getCartLineName, getCartLineBrand, getCartLineImages } from '@/types/product';
+import { getPackProducts } from '@/data/packs';
 import { useCartStore } from '@/store/useCartStore';
 import { getWhatsAppConfirmationLink, getWhatsAppDirectOrderLink } from '@/utils/whatsapp';
 import { ameexDestinations, findAmeexDestination } from '@/utils/ameex';
 
-export interface CheckoutItem {
-  product: Product;
-  selectedOption?: string;
-  quantity: number;
-}
+export type CheckoutItem = CartLine;
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -58,7 +55,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
   // Calculs financiers
   const subtotal = itemsToOrder.reduce(
-    (acc, it) => acc + it.product.price * it.quantity,
+    (acc, it) => acc + getCartLinePrice(it) * it.quantity,
     0
   );
   const selectedDestination = findAmeexDestination(city);
@@ -124,10 +121,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   // Formatage des articles pour WhatsApp et webhook
   const itemsTextSummary = itemsToOrder
     .map(
-      (item) =>
-        `- ${item.product.name} (${item.product.brand})${
-          item.selectedOption ? ` [${item.selectedOption}]` : ''
-        } x ${item.quantity} = ${item.product.price * item.quantity} DH`
+      (item) => item.kind === 'pack'
+        ? `- PACK: ${item.pack.name} (${getCartLineBrand(item)}) - Composition: ${getPackProducts(item.pack).map(({ product, selectedOption, quantity }) => `${product.name} ${selectedOption}${quantity > 1 ? ` x ${quantity}` : ''}`).join(' + ')} - Quantité: ${item.quantity} - Prix unitaire: ${getCartLinePrice(item)} DH - Sous-total: ${getCartLinePrice(item) * item.quantity} DH`
+        : `- ${getCartLineName(item)} (${getCartLineBrand(item)})${item.selectedOption ? ` [${item.selectedOption}]` : ''} x ${item.quantity} = ${getCartLinePrice(item) * item.quantity} DH`
     )
     .join('\n');
 
@@ -167,8 +163,18 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
           address: address.trim(),
           notes: notes.trim(),
         },
-        items: itemsToOrder.map((it) => ({
+        items: itemsToOrder.map((it) => it.kind === 'pack' ? ({
+          id: it.pack.id,
+          itemType: 'pack' as const,
+          name: it.pack.name,
+          brand: 'Packs Exclusifs',
+          selectedOption: getPackProducts(it.pack).map(({ product, selectedOption }) => `${product.name} ${selectedOption}`).join(', '),
+          includedProducts: getPackProducts(it.pack).map(({ product, quantity, selectedOption }) => ({ name: product.name, quantity, selectedOption })),
+          price: it.pack.price,
+          quantity: it.quantity,
+        }) : ({
           id: it.product.id,
+          itemType: 'product' as const,
           name: it.product.name,
           brand: it.product.brand,
           selectedOption: it.selectedOption,
@@ -329,7 +335,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
               <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={getWhatsAppConfirmationLink(confirmedOrderId, totalAmount as number)}
+                  href={getWhatsAppConfirmationLink(confirmedOrderId, totalAmount as number, undefined, itemsTextSummary)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold uppercase tracking-[0.18em] transition-all flex items-center justify-center gap-2 shadow-sm"
@@ -360,8 +366,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     <div key={idx} className={`flex items-center gap-3 ${idx > 0 ? 'pt-2.5' : ''}`}>
                       <div className="relative w-12 h-14 sm:w-14 sm:h-16 bg-[#F6F2EE] border border-[#EADFD7] shrink-0 overflow-hidden">
                         <Image
-                          src={formatImageSrc(item.product.images[0])}
-                          alt={item.product.name}
+                          src={formatImageSrc(getCartLineImages(item)[0])}
+                          alt={getCartLineName(item)}
                           fill
                           sizes="(max-width: 639px) 48px, 56px"
                           className="object-contain object-center"
@@ -369,18 +375,19 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       </div>
                       <div className="flex-1 min-w-0">
                         <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-[#8C827A] block">
-                          {item.product.brand}
+                          {getCartLineBrand(item)}
                         </span>
                         <h4 className="text-xs font-medium text-[#141414] truncate">
-                          {item.product.name}
+                          {getCartLineName(item)}
                         </h4>
-                        <span className="text-[10px] sm:text-[11px] text-[#736A63]">
-                          {item.selectedOption ? `${item.selectedOption} • ` : ''}Qté: {item.quantity}
-                        </span>
+                        {item.kind === 'pack' ? <>
+                          <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#B79A5E]">Pack combin&eacute; - Qt&eacute;: {item.quantity}</span>
+                          <span className="block text-[9px] leading-relaxed text-[#736A63]">{getPackProducts(item.pack).map(({ product, selectedOption }) => `${product.name} ${selectedOption}`).join(' / ')}</span>
+                        </> : <span className="text-[10px] sm:text-[11px] text-[#736A63]">{item.selectedOption ? `${item.selectedOption} - ` : ''}Qt&eacute;: {item.quantity}</span>}
                       </div>
                       <div className="text-right">
                         <span className="text-xs font-bold text-[#141414]">
-                          {formatPrice(item.product.price * item.quantity)}
+                          {formatPrice(getCartLinePrice(item) * item.quantity)}
                         </span>
                       </div>
                     </div>

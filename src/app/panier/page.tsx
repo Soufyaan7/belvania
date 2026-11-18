@@ -8,7 +8,8 @@ import { Footer } from '@/components/layout/Footer';
 import { CheckoutModal } from '@/components/checkout/CheckoutModal';
 import { UndoToast } from '@/components/ui/UndoToast';
 import { useCartStore } from '@/store/useCartStore';
-import { formatPrice, CartItem, formatImageSrc } from '@/types/product';
+import { formatPrice, CartLine, getCartLinePrice, getCartLineName, getCartLineBrand, getCartLineImages, formatImageSrc } from '@/types/product';
+import { getPackProducts } from '@/data/packs';
 import {
   Trash2,
   Plus,
@@ -30,7 +31,7 @@ export default function CartPage() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [undoState, setUndoState] = useState<{
     message: string;
-    items: CartItem[];
+    items: CartLine[];
   } | null>(null);
 
   const items = useCartStore((state) => state.items);
@@ -43,18 +44,14 @@ export default function CartPage() {
   const totalAmount = isMounted ? getTotalAmount() : 0;
   const itemCount = isMounted ? items.reduce((acc, it) => acc + it.quantity, 0) : 0;
 
-  const handleRemoveItem = (productId: string, selectedOption?: string) => {
-    const itemToRemove = items.find(
-      (it) =>
-        it.product.id === productId &&
-        (selectedOption === undefined || it.selectedOption === selectedOption)
-    );
+  const handleRemoveItem = (itemToRemove: CartLine) => {
+    const kind = itemToRemove.kind === 'pack' ? 'pack' : 'product';
     if (itemToRemove) {
       setUndoState({
-        message: `${itemToRemove.product.name} retiré du panier`,
+        message: `${getCartLineName(itemToRemove)} retiré du panier`,
         items: [itemToRemove],
       });
-      removeFromCart(productId, selectedOption);
+      removeFromCart(itemToRemove.kind === 'pack' ? itemToRemove.pack.id : itemToRemove.product.id, itemToRemove.kind === 'pack' ? undefined : itemToRemove.selectedOption, kind);
     }
   };
 
@@ -127,15 +124,22 @@ export default function CartPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
             {/* Colonne Gauche : Articles */}
             <div className="lg:col-span-7 space-y-4">
-              {items.map((item, idx) => (
+              {items.map((item, idx) => {
+                const isPack = item.kind === 'pack';
+                const lineId = isPack ? item.pack.id : item.product.id;
+                const linePrice = getCartLinePrice(item);
+                const lineImages = getCartLineImages(item);
+                const lineName = getCartLineName(item);
+                const lineBrand = getCartLineBrand(item);
+                return (
                 <div
-                  key={`${item.product.id}-${item.selectedOption || 'def'}-${idx}`}
+                  key={`${isPack ? 'pack' : lineId}-${lineId}-${isPack ? '' : item.selectedOption || 'def'}-${idx}`}
                   className="p-4 bg-white border border-[#EADFD7] flex gap-4 items-center"
                 >
                   <div className="relative w-20 h-24 bg-[#F6F2EE] border border-[#EADFD7] shrink-0 overflow-hidden">
                     <Image
-                      src={formatImageSrc(item.product.images[0])}
-                      alt={item.product.name}
+                      src={formatImageSrc(lineImages[0])}
+                      alt={lineName}
                       fill
                       sizes="80px"
                       className="object-contain object-center"
@@ -144,17 +148,19 @@ export default function CartPage() {
 
                   <div className="flex-1 min-w-0">
                     <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8C827A] block">
-                      {item.product.brand}
+                      {lineBrand}
                     </span>
                     <h3 className="font-display text-sm font-medium text-[#141414] truncate mb-1">
-                      {item.product.name}
+                      {lineName}
                     </h3>
-                    {item.selectedOption && (
+                    {isPack && <span className="mb-1 inline-block bg-[#F5EFEB] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#B79A5E]">Pack combiné</span>}
+                    {!isPack && item.selectedOption && (
                       <span className="inline-block text-[11px] text-[#736A63] bg-[#FAF8F5] px-2 py-0.5 border border-[#EADFD7] mb-2">
                         {item.selectedOption}
                       </span>
                     )}
 
+                    {isPack && <ul className="mb-2 space-y-0.5 text-[10px] text-[#736A63]">{getPackProducts(item.pack).map(({ product, selectedOption }) => <li key={product.id}>{product.name} · {selectedOption}</li>)}</ul>}
                     <div className="flex items-center gap-3 mt-1">
                       {/* Quantité */}
                       <div className="flex items-center border border-[#DECFC4]">
@@ -162,9 +168,10 @@ export default function CartPage() {
                           type="button"
                           onClick={() =>
                             updateQuantity(
-                              item.product.id,
+                              lineId,
                               item.quantity - 1,
-                              item.selectedOption
+                              isPack ? undefined : item.selectedOption,
+                              isPack ? 'pack' : 'product'
                             )
                           }
                           className="tap-target-44 w-9 h-9 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
@@ -179,9 +186,10 @@ export default function CartPage() {
                           type="button"
                           onClick={() =>
                             updateQuantity(
-                              item.product.id,
+                              lineId,
                               item.quantity + 1,
-                              item.selectedOption
+                              isPack ? undefined : item.selectedOption,
+                              isPack ? 'pack' : 'product'
                             )
                           }
                           className="tap-target-44 w-9 h-9 text-[#141414] hover:bg-[#F5EFEB] transition-colors"
@@ -195,7 +203,7 @@ export default function CartPage() {
                       <button
                         type="button"
                         onClick={() =>
-                          handleRemoveItem(item.product.id, item.selectedOption)
+                          handleRemoveItem(item)
                         }
                         className="tap-target-44 text-[#8C827A] hover:text-[#C62828] transition-colors"
                         aria-label="Supprimer l'article"
@@ -207,16 +215,16 @@ export default function CartPage() {
 
                   <div className="text-right shrink-0 tabular-nums">
                     <span className="text-sm font-bold text-[#141414] block">
-                      {formatPrice(item.product.price * item.quantity)}
+                      {formatPrice(linePrice * item.quantity)}
                     </span>
                     {item.quantity > 1 && (
                       <span className="text-[10px] text-[#8C827A]">
-                        {formatPrice(item.product.price)} / unité
+                        {formatPrice(linePrice)} / unité
                       </span>
                     )}
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
 
             {/* Colonne Droite : Récapitulatif et validation */}

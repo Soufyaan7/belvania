@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ProductCatalogSection } from '@/components/home/ProductCatalogSection';
+import { PacksSection } from '@/components/packs/PacksSection';
 import productsData from '@/data/products.json';
 import { Product } from '@/types/product';
 import {
@@ -135,6 +136,7 @@ export default function HomePage() {
         </section>
 
         {/* 3. Section "Meilleures Ventes & Nouveautés" avec filtrage */}
+        <PacksSection />
         <ProductCatalogSection products={products} />
 
         {/* 4. Section d'engagement "Pourquoi Belvania ?" */}

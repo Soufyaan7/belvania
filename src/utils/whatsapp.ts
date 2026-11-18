@@ -5,7 +5,8 @@
 export function getWhatsAppConfirmationLink(
   orderId: string,
   total: number | string,
-  customNumber?: string
+  customNumber?: string,
+  itemsSummary?: string
 ): string {
   const number = customNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
   if (!number) {
@@ -14,7 +15,8 @@ export function getWhatsAppConfirmationLink(
   }
   const cleanNumber = number.replace(/\D/g, '');
 
-  const text = `Bonjour Belvania, je confirme ma commande ${orderId} d'un montant de ${total} DH.`;
+  const itemsText = itemsSummary ? `\nArticles commandés :\n${itemsSummary}` : '';
+  const text = `Bonjour Belvania, je confirme ma commande ${orderId}.${itemsText}\nTotal à payer, livraison comprise : ${total} DH.`;
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
 }
 

@@ -120,6 +120,12 @@ export const Header: React.FC = () => {
                 Maquillage
               </Link>
               <Link
+                href="/packs"
+                className="text-xs uppercase tracking-[0.2em] font-medium text-[#B79A5E] hover:text-[#141414] transition-colors whitespace-nowrap"
+              >
+                Packs Exclusifs
+              </Link>
+              <Link
                 href="/#authenticite"
                 className="text-xs uppercase tracking-[0.2em] font-medium text-[#141414]/80 hover:text-[#B79A5E] transition-colors whitespace-nowrap"
               >
@@ -306,6 +312,15 @@ export const Header: React.FC = () => {
                     className="flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] font-medium text-[#141414] hover:text-[#B79A5E] hover:pl-1 transition-all border-b border-[#F0E6DE]"
                   >
                     <span>Maquillage</span>
+                    <ChevronRight className="w-4 h-4 text-[#CBB281]" />
+                  </Link>
+
+                  <Link
+                    href="/packs"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] font-medium text-[#B79A5E] hover:text-[#141414] hover:pl-1 transition-all border-b border-[#F0E6DE]"
+                  >
+                    <span>Packs Exclusifs</span>
                     <ChevronRight className="w-4 h-4 text-[#CBB281]" />
                   </Link>
 
