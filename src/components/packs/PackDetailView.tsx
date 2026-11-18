@@ -26,9 +26,22 @@ export function PackDetailView({ pack }: { pack: ProductPack }) {
   return <>
     <div className="mx-auto max-w-6xl px-4 py-8 pb-28 sm:px-6 sm:py-12 md:pb-12 lg:px-8">
       <nav className="mb-7 text-xs text-[#8C827A]"><Link href="/" className="hover:text-[#141414]">Accueil</Link> / <Link href="/packs" className="hover:text-[#141414]">Packs Exclusifs</Link> / <span className="text-[#141414]">{pack.name}</span></nav>
-      <div className="grid gap-8 lg:grid-cols-2 lg:gap-14">
-        <div className="bg-[#F5EFEB] p-3 sm:p-5">
-          <div className="relative aspect-[4/5] overflow-hidden bg-white"><Image src={formatImageSrc(selectedImage)} alt={`${pack.name} et ses parfums`} fill sizes="(max-width: 1023px) 90vw, 45vw" priority className="object-contain p-2 sm:p-4" /></div>
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-14 items-start">
+        {/* Cadre Visuel Publicitaire Haute Définition Plein Format (Edge-to-Edge) */}
+        <div className="relative w-full aspect-[4/5] overflow-hidden border border-[#EADFD7] bg-[#F5EFEB] shadow-xs group">
+          <Image
+            src={formatImageSrc(selectedImage)}
+            alt={`${pack.name} et ses parfums`}
+            fill
+            sizes="(max-width: 1023px) 100vw, 50vw"
+            priority
+            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          {pack.badge && (
+            <span className="absolute left-4 top-4 z-10 bg-[#141414]/90 backdrop-blur-xs px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#CBB281] shadow-xs">
+              {pack.badge}
+            </span>
+          )}
         </div>
         <div className="flex flex-col">
           <span className="text-[10px] font-semibold uppercase tracking-[0.23em] text-[#B79A5E]">{pack.badge ?? 'Packs Exclusifs'}</span>

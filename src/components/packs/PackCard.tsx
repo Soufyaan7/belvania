@@ -15,12 +15,27 @@ export function PackCard({ pack }: { pack: ProductPack }) {
   const included = getPackProducts(pack);
 
   return (
-    <article className="group grid overflow-hidden border border-[#EADFD7] bg-white shadow-xs transition-shadow hover:shadow-md sm:grid-cols-[1fr_1.05fr]">
-      <Link href={`/packs/${pack.slug}`} className="relative block min-h-64 overflow-hidden bg-[#F5EFEB] sm:min-h-72" aria-label={`Découvrir ${pack.name}`}>
-        <Image src={formatImageSrc(pack.images[0])} alt={pack.name} fill sizes="(max-width: 639px) 100vw, 50vw" className="object-contain p-3 transition-transform duration-500 group-hover:scale-105 sm:p-5" />
-        {pack.badge && <span className="absolute left-3 top-3 bg-[#141414] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#CBB281]">{pack.badge}</span>}
+    <article className="group grid overflow-hidden border border-[#EADFD7] bg-white shadow-xs transition-shadow hover:shadow-md sm:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:grid-cols-[minmax(300px,440px)_1fr]">
+      {/* Cadre Visuel Publicitaire Plein Format (Edge-to-Edge) */}
+      <Link
+        href={`/packs/${pack.slug}`}
+        className="relative block w-full aspect-[4/5] sm:aspect-auto sm:h-full sm:min-h-full overflow-hidden bg-[#F5EFEB] shrink-0"
+        aria-label={`Découvrir ${pack.name}`}
+      >
+        <Image
+          src={formatImageSrc(pack.images[0])}
+          alt={pack.name}
+          fill
+          sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 33vw"
+          className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        {pack.badge && (
+          <span className="absolute left-3.5 top-3.5 z-10 bg-[#141414]/90 backdrop-blur-xs px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#CBB281] shadow-xs">
+            {pack.badge}
+          </span>
+        )}
       </Link>
-      <div className="flex flex-col p-5 sm:p-7">
+      <div className="flex flex-col p-5 sm:p-7 md:p-8">
         <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#B79A5E]">Packs Exclusifs</span>
         <Link href={`/packs/${pack.slug}`}><h3 className="mt-2 font-display text-xl font-medium text-[#141414] sm:text-2xl">{pack.name}</h3></Link>
         <ul className="mt-3 space-y-1.5 text-xs text-[#736A63]">
