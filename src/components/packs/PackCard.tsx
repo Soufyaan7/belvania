@@ -19,7 +19,7 @@ export function PackCard({ pack }: { pack: ProductPack }) {
       {/* Cadre Visuel Publicitaire Plein Format (Edge-to-Edge) */}
       <Link
         href={`/packs/${pack.slug}`}
-        className="relative block w-full aspect-[4/5] sm:aspect-auto sm:h-full sm:min-h-full overflow-hidden bg-[#F5EFEB] shrink-0"
+        className="relative block w-full aspect-[4/5] overflow-hidden bg-[#F5EFEB] shrink-0"
         aria-label={`Découvrir ${pack.name}`}
       >
         <Image
