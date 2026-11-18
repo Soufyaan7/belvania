@@ -17,12 +17,16 @@ import {
 import { Product, formatPrice, formatImageSrc } from '@/types/product';
 import { useCartStore } from '@/store/useCartStore';
 import { CheckoutModal } from '@/components/checkout/CheckoutModal';
+import { ProductCard } from '@/components/ui/ProductCard';
+import productsData from '@/data/products.json';
+import { getRelatedProducts } from '@/utils/recommendations';
 
 interface ProductDetailViewProps {
   product: Product;
 }
 
 export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
+  const relatedProducts = getRelatedProducts(product, productsData as Product[], 4);
   // 1. État de la galerie d'images
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -505,6 +509,26 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
           </div>
         </div>
       </div>
+
+      {relatedProducts.length > 0 && (
+        <section className="mt-12 border-t border-[#EADFD7] pt-10 sm:mt-16 sm:pt-14" aria-labelledby="related-products-title">
+          <div className="mb-6 flex items-end justify-between border-b border-[#DECFC4] pb-4 sm:mb-8">
+            <div>
+              <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.23em] text-[#B79A5E]">
+                À découvrir également
+              </span>
+              <h2 id="related-products-title" className="font-display text-2xl font-medium text-[#141414] sm:text-3xl">
+                Vous aimerez aussi
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+            {relatedProducts.map((relatedProduct) => (
+              <ProductCard key={relatedProduct.id} product={relatedProduct} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ================= BARRE FIXE INFÉRIEURE MOBILE (Sticky Bottom Bar) ================= */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#FAF8F5]/98 backdrop-blur-md border-t border-[#DECFC4] p-3 px-4 pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
